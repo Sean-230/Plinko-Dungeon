@@ -57,8 +57,7 @@
       "arcade"
     ],
     "playableDevices": [
-      "keyboard",
-      "mouse"
+      "keyboard"
     ],
     "extensionProperties": [],
     "platforms": [
@@ -428,76 +427,90 @@
   "layouts": [
     {
       "b": 11,
-      "r": 9,
-      "v": 16,
       "disableInputWhenNotFocused": false,
       "mangledName": "Game",
       "name": "Game",
+      "r": 9,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "Plinko Dungeon - Main Game",
+      "v": 16,
       "uiSettings": {
         "grid": true,
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
+        "gridDepth": 32,
         "gridOffsetX": 0,
         "gridOffsetY": 0,
+        "gridOffsetZ": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": true,
-        "zoomFactor": 1.0,
-        "windowMask": true
+        "zoomFactor": 0.8471975907682705,
+        "windowMask": true,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
       },
       "objectsGroups": [],
       "variables": [
         {
           "name": "PlayerHP",
+          "persistentUuid": "75e97bc4-dcdb-47ec-b786-9a1c7abef211",
           "type": "number",
           "value": 100
         },
         {
           "name": "PlayerChips",
+          "persistentUuid": "b122ddfb-1f7c-4eec-b75b-b7deb3270a33",
           "type": "number",
           "value": 100
         },
         {
           "name": "Wager",
+          "persistentUuid": "5ab38f50-e996-4fcb-961a-a9f8f93fad90",
           "type": "number",
           "value": 10
         },
         {
           "name": "CurrentRound",
+          "persistentUuid": "56e15b7e-7453-42f3-b3f0-22f226dc53e1",
           "type": "number",
           "value": 1
         },
         {
           "name": "BossHP",
+          "persistentUuid": "5d2f832d-b4b1-42f3-89d6-f4dc0c8bdbb8",
           "type": "number",
           "value": 60
         },
         {
           "name": "BossMaxHP",
+          "persistentUuid": "07db074f-8684-4bb3-8a5c-1aacf7552e49",
           "type": "number",
           "value": 60
         },
         {
           "name": "BossCounter",
+          "persistentUuid": "d2e27346-65a1-4f9b-bb33-91d3e005de46",
           "type": "number",
           "value": 8
         },
         {
           "name": "AccumulatedDamage",
+          "persistentUuid": "936cc823-3b86-472d-8789-fd11c641aa3b",
           "type": "number",
           "value": 0
         },
         {
           "name": "Multiplier",
+          "persistentUuid": "32d7bf9d-e2b5-40b5-b74e-a5b031eaa7d7",
           "type": "number",
           "value": 1
         },
         {
           "name": "GameState",
+          "persistentUuid": "08335140-6011-4362-94e6-851a0ec7222d",
           "type": "string",
           "value": "aiming"
         }
@@ -506,13 +519,14 @@
         {
           "angle": 0,
           "customSize": true,
+          "depth": 1,
           "height": 720,
           "layer": "",
           "name": "Dungeon_Wall_Tiled",
           "persistentUuid": "c1fa06f8-2b45-42a2-8a2e-8452b6e320a1",
-          "width": 324,
-          "x": 0,
-          "y": 0,
+          "width": 323,
+          "x": 1,
+          "y": -1,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -541,8 +555,8 @@
           "name": "Neon_Border_Vert",
           "persistentUuid": "f31bf848-d677-4d4c-9900-3d0a0df72321",
           "width": 2,
-          "x": 324,
-          "y": 0,
+          "x": 340,
+          "y": 15,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -556,8 +570,8 @@
           "name": "Neon_Border_Vert",
           "persistentUuid": "0087d386-fbdd-452f-bb1a-7d7a5cb9ac9f",
           "width": 2,
-          "x": 955,
-          "y": 0,
+          "x": 974,
+          "y": 16,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -571,8 +585,8 @@
           "name": "Neon_Border_Horiz",
           "persistentUuid": "e50f5ab3-fbff-4cc0-b974-e7966665571a",
           "width": 633,
-          "x": 324,
-          "y": 0,
+          "x": 343,
+          "y": 14,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -658,21 +672,6 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "Txt_Subtitle",
-          "persistentUuid": "915a6ee4-9bad-45b6-889e-f5bff408e90a",
-          "width": 0,
-          "x": 20,
-          "y": 56,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
           "name": "Txt_Round",
           "persistentUuid": "ebf11520-bdb4-4094-9c3c-a80befd858fd",
           "width": 0,
@@ -706,8 +705,8 @@
           "name": "Boss",
           "persistentUuid": "e751c9a5-5821-429c-a27b-6b3cc5c5db65",
           "width": 160,
-          "x": 82,
-          "y": 165,
+          "x": 144,
+          "y": 240,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -886,8 +885,8 @@
           "name": "Txt_Ante",
           "persistentUuid": "f7e6604d-c614-49c6-8adc-905db9ccec19",
           "width": 0,
-          "x": 1065,
-          "y": 238,
+          "x": 1053,
+          "y": 224,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -916,8 +915,8 @@
           "name": "Txt_HighRoller",
           "persistentUuid": "baa67d1b-93e3-4f47-b4ab-cc58496e65da",
           "width": 0,
-          "x": 1030,
-          "y": 308,
+          "x": 1037,
+          "y": 293,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -970,45 +969,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 40,
           "layer": "",
           "name": "Txt_Banner",
           "persistentUuid": "c603f677-8242-4aff-a04e-2eac055a6435",
-          "width": 0,
-          "x": 420,
-          "y": 300,
+          "width": 10,
+          "x": 443,
+          "y": 306,
           "zOrder": 25,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 720,
-          "layer": "",
-          "name": "Wall_Boundaries",
-          "persistentUuid": "db165a14-b841-4bd2-a358-84a65383ce7a",
-          "width": 5,
-          "x": 320,
-          "y": 0,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 720,
-          "layer": "",
-          "name": "Wall_Boundaries",
-          "persistentUuid": "4447b68b-dcde-4fa2-9bf7-716c81b5e290",
-          "width": 5,
-          "x": 955,
-          "y": 0,
-          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1022,7 +992,7 @@
           "persistentUuid": "b043821e-ebb4-435b-8063-b53223122a7e",
           "width": 32,
           "x": 624,
-          "y": 10,
+          "y": 26,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -1046,13 +1016,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "a56bd689-0d43-4ec5-8da5-7fb269b3973c",
-          "width": 32,
-          "x": 350,
-          "y": 150,
+          "width": 34,
+          "x": 369,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1061,13 +1032,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "fe61e2a2-a1e3-4d33-aa3a-772c13f11884",
-          "width": 32,
-          "x": 414,
-          "y": 150,
+          "width": 34,
+          "x": 437,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1076,13 +1048,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "afd40531-e199-42f7-acd4-75c4174b3bbc",
-          "width": 32,
-          "x": 478,
-          "y": 150,
+          "width": 34,
+          "x": 504,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1091,13 +1064,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "e9c1c6fc-a9e8-42bf-bdfb-c2bbe9942ebc",
-          "width": 32,
-          "x": 542,
-          "y": 150,
+          "width": 34,
+          "x": 572,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1106,13 +1080,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "17c669f3-e81d-4e52-b83f-4e68a32af0df",
-          "width": 32,
-          "x": 606,
-          "y": 150,
+          "width": 34,
+          "x": 640,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1121,13 +1096,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "a21436d9-cf29-40cf-87cd-e17ba1d0f833",
-          "width": 32,
-          "x": 670,
-          "y": 150,
+          "width": 34,
+          "x": 708,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1136,13 +1112,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "351009f7-969f-432b-8a0c-0edeeeb65364",
-          "width": 32,
-          "x": 734,
-          "y": 150,
+          "width": 34,
+          "x": 776,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1151,13 +1128,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "b5b145cc-ccd2-4bc2-9312-215bf0dd99e9",
-          "width": 32,
-          "x": 798,
-          "y": 150,
+          "width": 34,
+          "x": 843,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1166,13 +1144,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "2d9758e3-d36e-4da5-abae-c4d4b8f465b8",
-          "width": 32,
-          "x": 862,
-          "y": 150,
+          "width": 34,
+          "x": 911,
+          "y": 145,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1181,13 +1160,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "c0bc6787-0220-4956-a34e-8ffd6961524e",
-          "width": 32,
-          "x": 382,
-          "y": 202,
+          "width": 34,
+          "x": 403,
+          "y": 201,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1196,13 +1176,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "498e2494-e100-4bc4-95e1-e55fea569a5d",
-          "width": 32,
-          "x": 446,
-          "y": 202,
+          "width": 34,
+          "x": 471,
+          "y": 201,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1211,13 +1192,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "80bc0902-2125-4f9f-9096-21d9c6babdc3",
-          "width": 32,
-          "x": 510,
-          "y": 202,
+          "width": 34,
+          "x": 538,
+          "y": 201,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1226,13 +1208,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Bomb",
           "persistentUuid": "bc52e34f-89c6-417f-9f77-d38955385e9b",
-          "width": 32,
-          "x": 574,
-          "y": 202,
+          "width": 34,
+          "x": 606,
+          "y": 201,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1241,13 +1224,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "29756751-b047-44d4-8aee-5a1c02909890",
-          "width": 32,
-          "x": 638,
-          "y": 202,
+          "width": 34,
+          "x": 674,
+          "y": 201,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1256,13 +1240,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "a7e4c1cf-0cbd-4ae4-adb1-13438a289ac7",
-          "width": 32,
-          "x": 702,
-          "y": 202,
+          "width": 34,
+          "x": 742,
+          "y": 201,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1271,13 +1256,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "ffc7901d-e039-43d2-a114-e0ba8b67480d",
-          "width": 32,
-          "x": 766,
-          "y": 202,
+          "width": 34,
+          "x": 809,
+          "y": 201,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1286,13 +1272,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "965b44fe-2d5b-446c-a8f2-1bffcd41fc76",
-          "width": 32,
-          "x": 830,
-          "y": 202,
+          "width": 34,
+          "x": 877,
+          "y": 201,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1301,13 +1288,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "9b3c8e23-9cfb-4322-9503-2dcf53489303",
-          "width": 32,
-          "x": 350,
-          "y": 254,
+          "width": 34,
+          "x": 369,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1316,13 +1304,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "93c975a3-3a3a-4db7-ac4a-849eaf93697f",
-          "width": 32,
-          "x": 414,
-          "y": 254,
+          "width": 34,
+          "x": 437,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1331,13 +1320,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "3e3dd9fe-f5a6-49f4-a336-7a62cab637cf",
-          "width": 32,
-          "x": 478,
-          "y": 254,
+          "width": 34,
+          "x": 504,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1346,13 +1336,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "74e27067-b2a2-4ae3-a006-4683f15c2e04",
-          "width": 32,
-          "x": 542,
-          "y": 254,
+          "width": 34,
+          "x": 572,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1361,13 +1352,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "414e5683-3939-4333-8c20-55fcf1b9df44",
-          "width": 32,
-          "x": 606,
-          "y": 254,
+          "width": 34,
+          "x": 640,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1376,13 +1368,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "b3038e25-5ec6-4f06-b4d5-fac3650f0806",
-          "width": 32,
-          "x": 670,
-          "y": 254,
+          "width": 34,
+          "x": 708,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1391,13 +1384,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "245832d2-1615-420e-994c-5b5bad4f8450",
-          "width": 32,
-          "x": 734,
-          "y": 254,
+          "width": 34,
+          "x": 776,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1406,13 +1400,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "c35e6aab-838d-4b9f-a53d-61d5f3112a6a",
-          "width": 32,
-          "x": 798,
-          "y": 254,
+          "width": 34,
+          "x": 843,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1421,13 +1416,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "fec15d0c-2407-4203-b9cc-8cd5e0d1201d",
-          "width": 32,
-          "x": 862,
-          "y": 254,
+          "width": 34,
+          "x": 911,
+          "y": 257,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1436,13 +1432,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "744c242f-61ff-4af5-b1e4-02064bd9f04d",
-          "width": 32,
-          "x": 382,
-          "y": 306,
+          "width": 34,
+          "x": 403,
+          "y": 312,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1451,13 +1448,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "5adb3968-1032-48d1-8a01-af24e0ba7be2",
-          "width": 32,
-          "x": 446,
-          "y": 306,
+          "width": 34,
+          "x": 471,
+          "y": 312,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1466,13 +1464,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "47a911bd-aa8b-4b02-93ef-87f7a3f359b7",
-          "width": 32,
-          "x": 510,
-          "y": 306,
+          "width": 34,
+          "x": 538,
+          "y": 312,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1481,13 +1480,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "561e9faf-1a49-4708-b0d2-9607bace4d47",
-          "width": 32,
-          "x": 574,
-          "y": 306,
+          "width": 34,
+          "x": 606,
+          "y": 312,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1496,13 +1496,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "339bbed9-8d2d-4d9d-ab76-3a558a10c787",
-          "width": 32,
-          "x": 638,
-          "y": 306,
+          "width": 34,
+          "x": 674,
+          "y": 312,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1511,13 +1512,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "37bb8ceb-8fb7-49b6-85c7-7750114983f2",
-          "width": 32,
-          "x": 702,
-          "y": 306,
+          "width": 34,
+          "x": 742,
+          "y": 312,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1526,13 +1528,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "0d096f6f-a2a9-4039-989e-265bc7f48429",
-          "width": 32,
-          "x": 766,
-          "y": 306,
+          "width": 34,
+          "x": 809,
+          "y": 312,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1541,13 +1544,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "7043cad0-798e-44d7-9da0-d420214f49b2",
-          "width": 32,
-          "x": 830,
-          "y": 306,
+          "width": 34,
+          "x": 877,
+          "y": 312,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1556,13 +1560,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "465598cc-9f7e-41cd-806b-0f2fa3966d43",
-          "width": 32,
-          "x": 350,
-          "y": 358,
+          "width": 34,
+          "x": 369,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1571,13 +1576,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "fa13c2ce-011f-491f-a821-83575f5f1115",
-          "width": 32,
-          "x": 414,
-          "y": 358,
+          "width": 34,
+          "x": 437,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1586,13 +1592,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "3bfad78c-e531-433e-93b0-a88c540d8124",
-          "width": 32,
-          "x": 478,
-          "y": 358,
+          "width": 34,
+          "x": 504,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1601,13 +1608,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "f384f572-6dfc-4a56-b410-afff0fa0b025",
-          "width": 32,
-          "x": 542,
-          "y": 358,
+          "width": 34,
+          "x": 572,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1616,13 +1624,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Bomb",
           "persistentUuid": "9f22a7f7-d738-4d3a-b5bf-6ca902f66599",
-          "width": 32,
-          "x": 606,
-          "y": 358,
+          "width": 34,
+          "x": 640,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1631,13 +1640,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "fb341ef2-1be5-4e6a-b78b-0cc47503dae3",
-          "width": 32,
-          "x": 670,
-          "y": 358,
+          "width": 34,
+          "x": 708,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1646,13 +1656,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "d27406be-57b1-4f8a-84fb-67a4c9b9dada",
-          "width": 32,
-          "x": 734,
-          "y": 358,
+          "width": 34,
+          "x": 776,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1661,13 +1672,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "06032e4b-c29f-40cf-aadc-391c832af32e",
-          "width": 32,
-          "x": 798,
-          "y": 358,
+          "width": 34,
+          "x": 843,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1676,13 +1688,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "0ee21669-ce0e-4411-b0c3-d0941f69941b",
-          "width": 32,
-          "x": 862,
-          "y": 358,
+          "width": 34,
+          "x": 911,
+          "y": 368,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1691,13 +1704,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "cccd7867-0182-403f-b44e-43f9a1041026",
-          "width": 32,
-          "x": 382,
-          "y": 410,
+          "width": 34,
+          "x": 403,
+          "y": 424,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1706,13 +1720,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "3d7dc3e1-592a-43b4-a6b9-33dce5e14a85",
-          "width": 32,
-          "x": 446,
-          "y": 410,
+          "width": 34,
+          "x": 471,
+          "y": 424,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1721,13 +1736,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "b3b642c8-1035-4682-9db8-18ef565eb116",
-          "width": 32,
-          "x": 510,
-          "y": 410,
+          "width": 34,
+          "x": 538,
+          "y": 424,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1736,13 +1752,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "f6746b02-4839-40f3-a463-7440b22bcca0",
-          "width": 32,
-          "x": 574,
-          "y": 410,
+          "width": 34,
+          "x": 606,
+          "y": 424,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1751,13 +1768,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "1eb3e27d-4ba9-4d89-a394-482709449021",
-          "width": 32,
-          "x": 638,
-          "y": 410,
+          "width": 34,
+          "x": 674,
+          "y": 424,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1766,13 +1784,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "69d03b47-b37d-49f5-a373-440ad2955851",
-          "width": 32,
-          "x": 702,
-          "y": 410,
+          "width": 34,
+          "x": 742,
+          "y": 424,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1781,13 +1800,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "65cf4cba-80a3-4530-98ab-15b37c4ff278",
-          "width": 32,
-          "x": 766,
-          "y": 410,
+          "width": 34,
+          "x": 809,
+          "y": 424,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1796,13 +1816,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "ef0b694b-0b9f-46ac-8bcd-8de9babfc696",
-          "width": 32,
-          "x": 830,
-          "y": 410,
+          "width": 34,
+          "x": 877,
+          "y": 424,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1811,13 +1832,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "f77813b5-a06f-4e6b-b718-2c436242cc04",
-          "width": 32,
-          "x": 350,
-          "y": 462,
+          "width": 34,
+          "x": 369,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1826,13 +1848,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Bomb",
           "persistentUuid": "aa7137bb-1ff3-4686-8f86-af1950c21445",
-          "width": 32,
-          "x": 414,
-          "y": 462,
+          "width": 34,
+          "x": 437,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1841,13 +1864,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "3636a171-8e91-482b-b9cc-e91695c1ef7b",
-          "width": 32,
-          "x": 478,
-          "y": 462,
+          "width": 34,
+          "x": 504,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1856,13 +1880,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "c90db973-cbd2-4dd7-a14a-35aa8ad94171",
-          "width": 32,
-          "x": 542,
-          "y": 462,
+          "width": 34,
+          "x": 572,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1871,13 +1896,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "8ab8bd5f-b1ff-413b-94e3-3ee9fbd16d30",
-          "width": 32,
-          "x": 606,
-          "y": 462,
+          "width": 34,
+          "x": 640,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1886,13 +1912,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "14dedfb7-a6ad-4c1e-b0e5-b6aae9e0aaed",
-          "width": 32,
-          "x": 670,
-          "y": 462,
+          "width": 34,
+          "x": 708,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1901,13 +1928,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "025af12b-d839-4f08-b86d-efdc5ae37e9e",
-          "width": 32,
-          "x": 734,
-          "y": 462,
+          "width": 34,
+          "x": 776,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1916,13 +1944,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Bomb",
           "persistentUuid": "83f19492-1e45-4859-8e89-093cad8c1162",
-          "width": 32,
-          "x": 798,
-          "y": 462,
+          "width": 34,
+          "x": 843,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1931,13 +1960,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "30d3c928-4d47-4082-ae04-8774abf7ddf8",
-          "width": 32,
-          "x": 862,
-          "y": 462,
+          "width": 34,
+          "x": 911,
+          "y": 479,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1946,13 +1976,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "2dbd30d9-c20a-4f40-87a9-c80609efd0aa",
-          "width": 32,
-          "x": 382,
-          "y": 514,
+          "width": 34,
+          "x": 403,
+          "y": 535,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1961,13 +1992,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "2461fe58-ee4d-447f-abba-5c5eec3bc886",
-          "width": 32,
-          "x": 446,
-          "y": 514,
+          "width": 34,
+          "x": 471,
+          "y": 535,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1976,13 +2008,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "04f685b0-a337-46c9-8c99-aa33afb44ad8",
-          "width": 32,
-          "x": 510,
-          "y": 514,
+          "width": 34,
+          "x": 538,
+          "y": 535,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1991,13 +2024,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "5ead959b-e897-48ab-a35f-a9ab94f6f284",
-          "width": 32,
-          "x": 574,
-          "y": 514,
+          "width": 34,
+          "x": 606,
+          "y": 535,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2006,13 +2040,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "095fddfe-ae9e-488d-84aa-dab19f4eea53",
-          "width": 32,
-          "x": 638,
-          "y": 514,
+          "width": 34,
+          "x": 674,
+          "y": 535,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2021,13 +2056,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "819d5d07-b4df-478b-a3b9-dde084ea7483",
-          "width": 32,
-          "x": 702,
-          "y": 514,
+          "width": 34,
+          "x": 742,
+          "y": 535,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2036,13 +2072,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "d91c4787-d48c-462f-9af1-737d14ce4938",
-          "width": 32,
-          "x": 766,
-          "y": 514,
+          "width": 34,
+          "x": 809,
+          "y": 535,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2051,13 +2088,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "8b460dcd-87db-4979-920e-59e65cf21bf4",
-          "width": 32,
-          "x": 830,
-          "y": 514,
+          "width": 34,
+          "x": 877,
+          "y": 535,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2066,13 +2104,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "f8b9f488-9932-4af7-b96c-2982c20719ae",
-          "width": 32,
-          "x": 350,
-          "y": 566,
+          "width": 34,
+          "x": 369,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2081,13 +2120,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "32951240-9122-4af2-a94f-58c82474e945",
-          "width": 32,
-          "x": 414,
-          "y": 566,
+          "width": 34,
+          "x": 437,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2096,13 +2136,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "ce090807-ed85-45d1-b06c-5982a0204208",
-          "width": 32,
-          "x": 478,
-          "y": 566,
+          "width": 34,
+          "x": 504,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2111,13 +2152,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "4d98f0b9-10ae-4230-ba92-9f8496af8697",
-          "width": 32,
-          "x": 542,
-          "y": 566,
+          "width": 34,
+          "x": 572,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2126,13 +2168,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "4fa79d7a-8b24-4a77-b7b8-e11622297fb3",
-          "width": 32,
-          "x": 606,
-          "y": 566,
+          "width": 34,
+          "x": 640,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2141,13 +2184,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "5ef3ab40-68e6-4377-930d-6e4e75cfda17",
-          "width": 32,
-          "x": 670,
-          "y": 566,
+          "width": 34,
+          "x": 708,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2156,13 +2200,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "0493e32d-e8c4-4c27-828c-661e1b428691",
-          "width": 32,
-          "x": 734,
-          "y": 566,
+          "width": 34,
+          "x": 776,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2171,13 +2216,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_Gold",
           "persistentUuid": "6fa0c8f7-b929-4a24-9191-fb667fecd78c",
-          "width": 32,
-          "x": 798,
-          "y": 566,
+          "width": 34,
+          "x": 843,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2186,13 +2232,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 32,
+          "depth": 1,
+          "height": 34,
           "layer": "",
           "name": "Peg_White",
           "persistentUuid": "cc244a37-7427-4256-92db-25b9a0411612",
-          "width": 32,
-          "x": 862,
-          "y": 566,
+          "width": 34,
+          "x": 911,
+          "y": 591,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2201,13 +2248,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 100,
+          "depth": 1,
+          "height": 116,
           "layer": "",
           "name": "Bucket_0_5x_A",
           "persistentUuid": "6c076dab-433f-4b15-ac34-33f9d087eadb",
-          "width": 126,
-          "x": 325,
-          "y": 615,
+          "width": 127,
+          "x": 387,
+          "y": 662,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -2216,13 +2264,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 100,
+          "depth": 1,
+          "height": 116,
           "layer": "",
           "name": "Bucket_1_5x_A",
           "persistentUuid": "365ebbeb-4f73-4f23-ae51-0f9b3cc1723d",
-          "width": 126,
-          "x": 451,
-          "y": 615,
+          "width": 127,
+          "x": 514,
+          "y": 662,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -2231,13 +2280,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 100,
+          "depth": 1,
+          "height": 116,
           "layer": "",
           "name": "Bucket_5_0x",
           "persistentUuid": "263abc30-4394-4bf9-b0d4-7434ce218833",
-          "width": 126,
-          "x": 577,
-          "y": 615,
+          "width": 127,
+          "x": 642,
+          "y": 662,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -2246,13 +2296,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 100,
+          "depth": 1,
+          "height": 116,
           "layer": "",
           "name": "Bucket_1_5x_B",
           "persistentUuid": "a5b890c3-d2b6-4bbd-ad26-45f9d943ce3d",
-          "width": 126,
-          "x": 703,
-          "y": 615,
+          "width": 127,
+          "x": 769,
+          "y": 662,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -2261,13 +2312,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 100,
+          "depth": 1,
+          "height": 116,
           "layer": "",
           "name": "Bucket_0_5x_B",
           "persistentUuid": "10451a2c-6586-4d38-a780-5e7986ba12d7",
-          "width": 126,
-          "x": 829,
-          "y": 615,
+          "width": 127,
+          "x": 896,
+          "y": 662,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -2279,6 +2331,7 @@
           "assetStoreId": "",
           "height": 32,
           "name": "Dungeon_Wall_Tiled",
+          "persistentUuid": "03a972d5-b77a-430b-82a6-33763fc701ff",
           "texture": "assets/wall_brick.png",
           "type": "TiledSpriteObject::TiledSprite",
           "width": 32,
@@ -2290,6 +2343,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Dropper",
+          "persistentUuid": "b636f860-e12a-4b48-9d5f-51050e635c7b",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -2391,7 +2445,7 @@
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 2.0,
+              "density": 2,
               "friction": 0.3,
               "restitution": 0.8,
               "linearDamping": 0.1,
@@ -2456,12 +2510,12 @@
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 1.0,
+              "density": 1,
               "friction": 0.3,
               "restitution": 0.95,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
-              "gravityScale": 1.0,
+              "gravityScale": 1,
               "layers": 1,
               "masks": 1
             }
@@ -2521,12 +2575,12 @@
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 1.0,
+              "density": 1,
               "friction": 0.3,
               "restitution": 0.95,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
-              "gravityScale": 1.0,
+              "gravityScale": 1,
               "layers": 1,
               "masks": 1
             }
@@ -2586,12 +2640,12 @@
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 1.0,
+              "density": 1,
               "friction": 0.3,
               "restitution": 0.95,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
-              "gravityScale": 1.0,
+              "gravityScale": 1,
               "layers": 1,
               "masks": 1
             }
@@ -2632,6 +2686,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Bucket_0_5x_A",
+          "persistentUuid": "72f7afaf-bfc1-4121-a89e-fe0b636f6cab",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -2837,6 +2892,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Wall_Boundaries",
+          "persistentUuid": "a9d9c494-9e66-4ee0-9742-afef6b5f9c95",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -2856,12 +2912,12 @@
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 1.0,
+              "density": 1,
               "friction": 0.3,
               "restitution": 0.5,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
-              "gravityScale": 1.0,
+              "gravityScale": 1,
               "layers": 1,
               "masks": 1
             }
@@ -2902,6 +2958,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Neon_Border_Vert",
+          "persistentUuid": "830144a6-184e-46a6-97e9-de4c2109892e",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -2943,6 +3000,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Neon_Border_Horiz",
+          "persistentUuid": "2483494b-16a7-408d-b5a7-00c8f785b793",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -3148,6 +3206,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Boss",
+          "persistentUuid": "4ac267aa-9b4f-4f38-ace7-8757d550c37d",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -3387,9 +3446,9 @@
           "textAlignment": "left",
           "characterSize": 24,
           "color": {
-            "r": 0,
+            "b": 255,
             "g": 240,
-            "b": 255
+            "r": 0
           },
           "content": {
             "bold": true,
@@ -3419,6 +3478,7 @@
           "bold": true,
           "italic": false,
           "name": "Txt_Subtitle",
+          "persistentUuid": "7ad68401-a20d-452e-9175-ddd14478f9a6",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -3435,9 +3495,9 @@
           "textAlignment": "left",
           "characterSize": 12,
           "color": {
-            "r": 120,
+            "b": 160,
             "g": 140,
-            "b": 160
+            "r": 120
           },
           "content": {
             "bold": true,
@@ -3467,6 +3527,7 @@
           "bold": true,
           "italic": false,
           "name": "Txt_Round",
+          "persistentUuid": "05b50795-052b-44d4-9e39-d3c9f4b46f4e",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -3483,9 +3544,9 @@
           "textAlignment": "left",
           "characterSize": 18,
           "color": {
-            "r": 255,
+            "b": 0,
             "g": 215,
-            "b": 0
+            "r": 255
           },
           "content": {
             "bold": true,
@@ -3531,9 +3592,9 @@
           "textAlignment": "left",
           "characterSize": 20,
           "color": {
-            "r": 255,
+            "b": 255,
             "g": 255,
-            "b": 255
+            "r": 255
           },
           "content": {
             "bold": true,
@@ -3579,9 +3640,9 @@
           "textAlignment": "left",
           "characterSize": 16,
           "color": {
-            "r": 255,
+            "b": 255,
             "g": 255,
-            "b": 255
+            "r": 255
           },
           "content": {
             "bold": true,
@@ -3627,9 +3688,9 @@
           "textAlignment": "left",
           "characterSize": 15,
           "color": {
-            "r": 255,
+            "b": 0,
             "g": 140,
-            "b": 0
+            "r": 255
           },
           "content": {
             "bold": true,
@@ -3675,9 +3736,9 @@
           "textAlignment": "left",
           "characterSize": 13,
           "color": {
-            "r": 120,
+            "b": 160,
             "g": 140,
-            "b": 160
+            "r": 120
           },
           "content": {
             "bold": true,
@@ -3723,9 +3784,9 @@
           "textAlignment": "left",
           "characterSize": 28,
           "color": {
-            "r": 255,
+            "b": 0,
             "g": 215,
-            "b": 0
+            "r": 255
           },
           "content": {
             "bold": true,
@@ -3755,6 +3816,7 @@
           "bold": true,
           "italic": false,
           "name": "Txt_Ante",
+          "persistentUuid": "807fd0ec-8f39-4e78-a6f8-a7d8c5b7d1d4",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -3771,9 +3833,9 @@
           "textAlignment": "left",
           "characterSize": 20,
           "color": {
-            "r": 0,
+            "b": 255,
             "g": 240,
-            "b": 255
+            "r": 0
           },
           "content": {
             "bold": true,
@@ -3803,6 +3865,7 @@
           "bold": true,
           "italic": false,
           "name": "Txt_HighRoller",
+          "persistentUuid": "be144e2c-c2bb-42cd-ad4f-3e86d555f6a9",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -3819,9 +3882,9 @@
           "textAlignment": "left",
           "characterSize": 18,
           "color": {
-            "r": 255,
+            "b": 0,
             "g": 215,
-            "b": 0
+            "r": 255
           },
           "content": {
             "bold": true,
@@ -3867,9 +3930,9 @@
           "textAlignment": "left",
           "characterSize": 15,
           "color": {
-            "r": 255,
+            "b": 0,
             "g": 165,
-            "b": 0
+            "r": 255
           },
           "content": {
             "bold": true,
@@ -3915,9 +3978,9 @@
           "textAlignment": "left",
           "characterSize": 13,
           "color": {
-            "r": 120,
+            "b": 160,
             "g": 140,
-            "b": 160
+            "r": 120
           },
           "content": {
             "bold": true,
@@ -3947,6 +4010,7 @@
           "bold": true,
           "italic": false,
           "name": "Txt_Banner",
+          "persistentUuid": "392d48e0-fc2f-414a-9815-05da49e0d78b",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
@@ -3963,9 +4027,9 @@
           "textAlignment": "left",
           "characterSize": 32,
           "color": {
-            "r": 255,
+            "b": 0,
             "g": 215,
-            "b": 0
+            "r": 255
           },
           "content": {
             "bold": true,
@@ -3992,7 +4056,120 @@
         }
       ],
       "objectsFolderStructure": {
-        "folderName": "__ROOT"
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Dungeon_Wall_Tiled"
+          },
+          {
+            "objectName": "Dropper"
+          },
+          {
+            "objectName": "Aim_Dots"
+          },
+          {
+            "objectName": "Orb"
+          },
+          {
+            "objectName": "Peg_White"
+          },
+          {
+            "objectName": "Peg_Gold"
+          },
+          {
+            "objectName": "Peg_Bomb"
+          },
+          {
+            "objectName": "Bucket_0_5x_A"
+          },
+          {
+            "objectName": "Bucket_1_5x_A"
+          },
+          {
+            "objectName": "Bucket_5_0x"
+          },
+          {
+            "objectName": "Bucket_1_5x_B"
+          },
+          {
+            "objectName": "Bucket_0_5x_B"
+          },
+          {
+            "objectName": "Wall_Boundaries"
+          },
+          {
+            "objectName": "Neon_Border_Vert"
+          },
+          {
+            "objectName": "Neon_Border_Horiz"
+          },
+          {
+            "objectName": "UI_HP_Frame"
+          },
+          {
+            "objectName": "UI_HP_Fill"
+          },
+          {
+            "objectName": "UI_Btn_Ante"
+          },
+          {
+            "objectName": "UI_Btn_HighRoller"
+          },
+          {
+            "objectName": "Boss"
+          },
+          {
+            "objectName": "Torch"
+          },
+          {
+            "objectName": "UI_Heart"
+          },
+          {
+            "objectName": "UI_Chip"
+          },
+          {
+            "objectName": "Orb_Preview"
+          },
+          {
+            "objectName": "Txt_Title"
+          },
+          {
+            "objectName": "Txt_Subtitle"
+          },
+          {
+            "objectName": "Txt_Round"
+          },
+          {
+            "objectName": "Txt_BossName"
+          },
+          {
+            "objectName": "Txt_BossHP"
+          },
+          {
+            "objectName": "Txt_BossCounter"
+          },
+          {
+            "objectName": "Txt_PlayerHP_Label"
+          },
+          {
+            "objectName": "Txt_PlayerChips"
+          },
+          {
+            "objectName": "Txt_Ante"
+          },
+          {
+            "objectName": "Txt_HighRoller"
+          },
+          {
+            "objectName": "Txt_OrbInfo"
+          },
+          {
+            "objectName": "Txt_Controls"
+          },
+          {
+            "objectName": "Txt_Banner"
+          }
+        ]
       },
       "events": [
         {
@@ -4029,7 +4206,111 @@
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "Aim Dropper"
+          "comment": "--- DROPPER AIMING (A / D & LEFT / RIGHT ARROWS) ---"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"a\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Dropper",
+                "-",
+                "500 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"A\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Dropper",
+                "-",
+                "500 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Dropper",
+                "-",
+                "500 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "a"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Dropper",
+                "-",
+                "500 * TimeDelta()"
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4042,37 +4323,121 @@
                 "",
                 "Left"
               ]
-            },
+            }
+          ],
+          "actions": [
             {
               "type": {
-                "value": "ValBetween"
+                "value": "SetX"
               },
               "parameters": [
-                "Dropper.X()",
-                "360",
-                "920"
+                "Dropper",
+                "-",
+                "500 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"d\""
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "MvtSimple"
+                "value": "SetX"
               },
               "parameters": [
                 "Dropper",
-                "-380",
-                "0"
+                "+",
+                "500 * TimeDelta()"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
               "type": {
-                "value": "MvtSimple"
+                "value": "KeyFromTextPressed"
               },
               "parameters": [
-                "Aim_Dots",
-                "-380",
-                "0"
+                "",
+                "\"D\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Dropper",
+                "+",
+                "500 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Right\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Dropper",
+                "+",
+                "500 * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "d"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Dropper",
+                "+",
+                "500 * TimeDelta()"
               ]
             }
           ]
@@ -4088,44 +4453,54 @@
                 "",
                 "Right"
               ]
-            },
-            {
-              "type": {
-                "value": "ValBetween"
-              },
-              "parameters": [
-                "Dropper.X()",
-                "350",
-                "905"
-              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "MvtSimple"
+                "value": "SetX"
               },
               "parameters": [
                 "Dropper",
-                "380",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "MvtSimple"
-              },
-              "parameters": [
-                "Aim_Dots",
-                "380",
-                "0"
+                "+",
+                "500 * TimeDelta()"
               ]
             }
           ]
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "Wager Switching"
+          "comment": "Keep Dropper Clamped to Inner Square Edges & Sync Aim Dots"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Dropper",
+                "=",
+                "clamp(Dropper.X(), 352, 929)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "Aim_Dots",
+                "=",
+                "Dropper.X() + 14"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "--- WAGER SWITCHING (1 / 2) ---"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4136,14 +4511,14 @@
               },
               "parameters": [
                 "",
-                "Num1"
+                "1"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "SetNumberVariable"
+                "value": "ModVarScene"
               },
               "parameters": [
                 "Wager",
@@ -4173,14 +4548,14 @@
               },
               "parameters": [
                 "",
-                "Num2"
+                "2"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "SetNumberVariable"
+                "value": "ModVarScene"
               },
               "parameters": [
                 "Wager",
@@ -4203,14 +4578,14 @@
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "Drop Kinetic Orb"
+          "comment": "--- SHOOT / DROP KINETIC ORB (SPACEBAR or DOWN ARROW) ---"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "KeyReleased"
+                "value": "KeyPressed"
               },
               "parameters": [
                 "",
@@ -4219,66 +4594,12 @@
             },
             {
               "type": {
-                "value": "VarCompareString"
+                "value": "BuiltinCommonInstructions::Once"
               },
-              "parameters": [
-                "GameState",
-                "=",
-                "\"aiming\""
-              ]
-            },
-            {
-              "type": {
-                "value": "VarCompareNumbers"
-              },
-              "parameters": [
-                "PlayerChips",
-                ">=",
-                "Variable(Wager)"
-              ]
+              "parameters": []
             }
           ],
           "actions": [
-            {
-              "type": {
-                "value": "SetStringVariable"
-              },
-              "parameters": [
-                "GameState",
-                "=",
-                "\"dropping\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "PlayerChips",
-                "-",
-                "Variable(Wager)"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "AccumulatedDamage",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "Multiplier",
-                "=",
-                "1"
-              ]
-            },
             {
               "type": {
                 "value": "Create"
@@ -4287,8 +4608,18 @@
                 "",
                 "Orb",
                 "Dropper.X() + 4",
-                "Dropper.Y() + 42",
+                "Dropper.Y() + 46",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetZOrder"
+              },
+              "parameters": [
+                "Orb",
+                "=",
+                "12"
               ]
             },
             {
@@ -4299,8 +4630,18 @@
                 "",
                 "assets/sfx_orb_release.wav",
                 "",
-                "60",
+                "70",
                 "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "-",
+                "Wager"
               ]
             },
             {
@@ -4311,14 +4652,91 @@
                 "Txt_PlayerChips",
                 "Text",
                 "=",
-                "\"$ \" + ToString(Variable(PlayerChips))"
+                "\"$ \" + ToString(PlayerChips)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Down"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Orb",
+                "Dropper.X() + 4",
+                "Dropper.Y() + 46",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetZOrder"
+              },
+              "parameters": [
+                "Orb",
+                "=",
+                "12"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_orb_release.wav",
+                "",
+                "70",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "-",
+                "Wager"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(PlayerChips)"
               ]
             }
           ]
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "Peg Collisions"
+          "comment": "--- PEG COLLISIONS ---"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4338,7 +4756,7 @@
           "actions": [
             {
               "type": {
-                "value": "SetNumberVariable"
+                "value": "ModVarScene"
               },
               "parameters": [
                 "AccumulatedDamage",
@@ -4355,7 +4773,7 @@
                 "assets/sfx_peg_ding.wav",
                 "",
                 "55",
-                "1.0 + (Variable(AccumulatedDamage) * 0.05)"
+                "1.0 + (AccumulatedDamage * 0.05)"
               ]
             }
           ]
@@ -4378,7 +4796,7 @@
           "actions": [
             {
               "type": {
-                "value": "SetNumberVariable"
+                "value": "ModVarScene"
               },
               "parameters": [
                 "Multiplier",
@@ -4418,7 +4836,7 @@
           "actions": [
             {
               "type": {
-                "value": "SetNumberVariable"
+                "value": "ModVarScene"
               },
               "parameters": [
                 "AccumulatedDamage",
@@ -4443,7 +4861,19 @@
       ],
       "layers": [
         {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 0.1,
+          "cameraType": "perspective",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
           "name": "",
+          "renderingType": "",
           "visibility": true,
           "cameras": [
             {
@@ -4456,7 +4886,8 @@
               "viewportTop": 0,
               "width": 0
             }
-          ]
+          ],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -4464,9 +4895,10 @@
           "name": "Physics2",
           "type": "Physics2::Physics2Behavior",
           "gravityX": 0,
-          "gravityY": 12.0,
+          "gravityY": 12,
           "scaleX": 50,
-          "scaleY": 50
+          "scaleY": 50,
+          "worldScale": 50
         },
         {
           "name": "Text",
