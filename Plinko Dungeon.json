@@ -436,7 +436,7 @@
       "title": "Plinko Dungeon - Main Game",
       "v": 16,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
@@ -446,7 +446,7 @@
         "gridOffsetZ": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.2,
-        "snap": true,
+        "snap": false,
         "zoomFactor": 0.8471975907682705,
         "windowMask": true,
         "selectedLayer": "",
@@ -456,63 +456,81 @@
       "variables": [
         {
           "name": "PlayerHP",
-          "persistentUuid": "75e97bc4-dcdb-47ec-b786-9a1c7abef211",
+          "persistentUuid": "d2a6cc7e-f271-41ad-aa3e-bcb41db28d0f",
           "type": "number",
           "value": 100
         },
         {
           "name": "PlayerChips",
-          "persistentUuid": "b122ddfb-1f7c-4eec-b75b-b7deb3270a33",
+          "persistentUuid": "7188d195-375f-409f-94a1-6d89809bd6f3",
           "type": "number",
           "value": 100
         },
         {
           "name": "Wager",
-          "persistentUuid": "5ab38f50-e996-4fcb-961a-a9f8f93fad90",
+          "persistentUuid": "720f0ca6-21ef-43d7-af4f-a767203557f9",
           "type": "number",
           "value": 10
         },
         {
           "name": "CurrentRound",
-          "persistentUuid": "56e15b7e-7453-42f3-b3f0-22f226dc53e1",
+          "persistentUuid": "07e45f4a-241d-4f5d-a47e-690215baae07",
           "type": "number",
           "value": 1
         },
         {
           "name": "BossHP",
-          "persistentUuid": "5d2f832d-b4b1-42f3-89d6-f4dc0c8bdbb8",
+          "persistentUuid": "90647bce-f0fd-4cc7-832c-d6935aa4902b",
           "type": "number",
           "value": 60
         },
         {
           "name": "BossMaxHP",
-          "persistentUuid": "07db074f-8684-4bb3-8a5c-1aacf7552e49",
+          "persistentUuid": "1d8fb254-3987-4eb4-ae2b-a92c899a6eb0",
           "type": "number",
           "value": 60
         },
         {
           "name": "BossCounter",
-          "persistentUuid": "d2e27346-65a1-4f9b-bb33-91d3e005de46",
+          "persistentUuid": "940f78b5-9a73-407d-af42-c67edbaf513e",
           "type": "number",
           "value": 8
         },
         {
           "name": "AccumulatedDamage",
-          "persistentUuid": "936cc823-3b86-472d-8789-fd11c641aa3b",
+          "persistentUuid": "f99bfad9-d410-4662-86e9-771f9aee437d",
           "type": "number",
           "value": 0
         },
         {
           "name": "Multiplier",
-          "persistentUuid": "32d7bf9d-e2b5-40b5-b74e-a5b031eaa7d7",
+          "persistentUuid": "f75a1a6f-a00c-4dc9-8dac-95bf4add1731",
           "type": "number",
           "value": 1
         },
         {
           "name": "GameState",
-          "persistentUuid": "08335140-6011-4362-94e6-851a0ec7222d",
-          "type": "string",
-          "value": "aiming"
+          "persistentUuid": "4e66662c-509a-41ce-969a-9b66cde60055",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TurnTimer",
+          "persistentUuid": "1058b91c-cf12-491c-b175-6ada38c600f0",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ChipsWon",
+          "persistentUuid": "b5cdf402-9f34-4705-83c0-30d18de0638d",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DamageDealt",
+          "persistentUuid": "d6c6de77-62c9-461a-9f93-8dc0843914d4",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -885,8 +903,8 @@
           "name": "Txt_Ante",
           "persistentUuid": "f7e6604d-c614-49c6-8adc-905db9ccec19",
           "width": 0,
-          "x": 1053,
-          "y": 224,
+          "x": 1055,
+          "y": 222,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -971,13 +989,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 40,
+          "height": 37,
           "layer": "",
           "name": "Txt_Banner",
           "persistentUuid": "c603f677-8242-4aff-a04e-2eac055a6435",
-          "width": 10,
-          "x": 443,
-          "y": 306,
+          "width": 8,
+          "x": 465,
+          "y": 294,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -1017,1246 +1035,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "a56bd689-0d43-4ec5-8da5-7fb269b3973c",
-          "width": 34,
-          "x": 369,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "fe61e2a2-a1e3-4d33-aa3a-772c13f11884",
-          "width": 34,
-          "x": 437,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "afd40531-e199-42f7-acd4-75c4174b3bbc",
-          "width": 34,
-          "x": 504,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "e9c1c6fc-a9e8-42bf-bdfb-c2bbe9942ebc",
-          "width": 34,
-          "x": 572,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "17c669f3-e81d-4e52-b83f-4e68a32af0df",
-          "width": 34,
-          "x": 640,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "a21436d9-cf29-40cf-87cd-e17ba1d0f833",
-          "width": 34,
-          "x": 708,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "351009f7-969f-432b-8a0c-0edeeeb65364",
-          "width": 34,
-          "x": 776,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "b5b145cc-ccd2-4bc2-9312-215bf0dd99e9",
-          "width": 34,
-          "x": 843,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "2d9758e3-d36e-4da5-abae-c4d4b8f465b8",
-          "width": 34,
-          "x": 911,
-          "y": 145,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "c0bc6787-0220-4956-a34e-8ffd6961524e",
-          "width": 34,
-          "x": 403,
-          "y": 201,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "498e2494-e100-4bc4-95e1-e55fea569a5d",
-          "width": 34,
-          "x": 471,
-          "y": 201,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "80bc0902-2125-4f9f-9096-21d9c6babdc3",
-          "width": 34,
-          "x": 538,
-          "y": 201,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Bomb",
-          "persistentUuid": "bc52e34f-89c6-417f-9f77-d38955385e9b",
-          "width": 34,
-          "x": 606,
-          "y": 201,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "29756751-b047-44d4-8aee-5a1c02909890",
-          "width": 34,
-          "x": 674,
-          "y": 201,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "a7e4c1cf-0cbd-4ae4-adb1-13438a289ac7",
-          "width": 34,
-          "x": 742,
-          "y": 201,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "ffc7901d-e039-43d2-a114-e0ba8b67480d",
-          "width": 34,
-          "x": 809,
-          "y": 201,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "965b44fe-2d5b-446c-a8f2-1bffcd41fc76",
-          "width": 34,
-          "x": 877,
-          "y": 201,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "9b3c8e23-9cfb-4322-9503-2dcf53489303",
-          "width": 34,
-          "x": 369,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "93c975a3-3a3a-4db7-ac4a-849eaf93697f",
-          "width": 34,
-          "x": 437,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "3e3dd9fe-f5a6-49f4-a336-7a62cab637cf",
-          "width": 34,
-          "x": 504,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "74e27067-b2a2-4ae3-a006-4683f15c2e04",
-          "width": 34,
-          "x": 572,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "414e5683-3939-4333-8c20-55fcf1b9df44",
-          "width": 34,
-          "x": 640,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "b3038e25-5ec6-4f06-b4d5-fac3650f0806",
-          "width": 34,
-          "x": 708,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "245832d2-1615-420e-994c-5b5bad4f8450",
-          "width": 34,
-          "x": 776,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "c35e6aab-838d-4b9f-a53d-61d5f3112a6a",
-          "width": 34,
-          "x": 843,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "fec15d0c-2407-4203-b9cc-8cd5e0d1201d",
-          "width": 34,
-          "x": 911,
-          "y": 257,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "744c242f-61ff-4af5-b1e4-02064bd9f04d",
-          "width": 34,
-          "x": 403,
-          "y": 312,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "5adb3968-1032-48d1-8a01-af24e0ba7be2",
-          "width": 34,
-          "x": 471,
-          "y": 312,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "47a911bd-aa8b-4b02-93ef-87f7a3f359b7",
-          "width": 34,
-          "x": 538,
-          "y": 312,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "561e9faf-1a49-4708-b0d2-9607bace4d47",
-          "width": 34,
-          "x": 606,
-          "y": 312,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "339bbed9-8d2d-4d9d-ab76-3a558a10c787",
-          "width": 34,
-          "x": 674,
-          "y": 312,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "37bb8ceb-8fb7-49b6-85c7-7750114983f2",
-          "width": 34,
-          "x": 742,
-          "y": 312,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "0d096f6f-a2a9-4039-989e-265bc7f48429",
-          "width": 34,
-          "x": 809,
-          "y": 312,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "7043cad0-798e-44d7-9da0-d420214f49b2",
-          "width": 34,
-          "x": 877,
-          "y": 312,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "465598cc-9f7e-41cd-806b-0f2fa3966d43",
-          "width": 34,
-          "x": 369,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "fa13c2ce-011f-491f-a821-83575f5f1115",
-          "width": 34,
-          "x": 437,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "3bfad78c-e531-433e-93b0-a88c540d8124",
-          "width": 34,
-          "x": 504,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "f384f572-6dfc-4a56-b410-afff0fa0b025",
-          "width": 34,
-          "x": 572,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Bomb",
-          "persistentUuid": "9f22a7f7-d738-4d3a-b5bf-6ca902f66599",
-          "width": 34,
-          "x": 640,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "fb341ef2-1be5-4e6a-b78b-0cc47503dae3",
-          "width": 34,
-          "x": 708,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "d27406be-57b1-4f8a-84fb-67a4c9b9dada",
-          "width": 34,
-          "x": 776,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "06032e4b-c29f-40cf-aadc-391c832af32e",
-          "width": 34,
-          "x": 843,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "0ee21669-ce0e-4411-b0c3-d0941f69941b",
-          "width": 34,
-          "x": 911,
-          "y": 368,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "cccd7867-0182-403f-b44e-43f9a1041026",
-          "width": 34,
-          "x": 403,
-          "y": 424,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "3d7dc3e1-592a-43b4-a6b9-33dce5e14a85",
-          "width": 34,
-          "x": 471,
-          "y": 424,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "b3b642c8-1035-4682-9db8-18ef565eb116",
-          "width": 34,
-          "x": 538,
-          "y": 424,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "f6746b02-4839-40f3-a463-7440b22bcca0",
-          "width": 34,
-          "x": 606,
-          "y": 424,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "1eb3e27d-4ba9-4d89-a394-482709449021",
-          "width": 34,
-          "x": 674,
-          "y": 424,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "69d03b47-b37d-49f5-a373-440ad2955851",
-          "width": 34,
-          "x": 742,
-          "y": 424,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "65cf4cba-80a3-4530-98ab-15b37c4ff278",
-          "width": 34,
-          "x": 809,
-          "y": 424,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "ef0b694b-0b9f-46ac-8bcd-8de9babfc696",
-          "width": 34,
-          "x": 877,
-          "y": 424,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "f77813b5-a06f-4e6b-b718-2c436242cc04",
-          "width": 34,
-          "x": 369,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Bomb",
-          "persistentUuid": "aa7137bb-1ff3-4686-8f86-af1950c21445",
-          "width": 34,
-          "x": 437,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "3636a171-8e91-482b-b9cc-e91695c1ef7b",
-          "width": 34,
-          "x": 504,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "c90db973-cbd2-4dd7-a14a-35aa8ad94171",
-          "width": 34,
-          "x": 572,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "8ab8bd5f-b1ff-413b-94e3-3ee9fbd16d30",
-          "width": 34,
-          "x": 640,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "14dedfb7-a6ad-4c1e-b0e5-b6aae9e0aaed",
-          "width": 34,
-          "x": 708,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "025af12b-d839-4f08-b86d-efdc5ae37e9e",
-          "width": 34,
-          "x": 776,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Bomb",
-          "persistentUuid": "83f19492-1e45-4859-8e89-093cad8c1162",
-          "width": 34,
-          "x": 843,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "30d3c928-4d47-4082-ae04-8774abf7ddf8",
-          "width": 34,
-          "x": 911,
-          "y": 479,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "2dbd30d9-c20a-4f40-87a9-c80609efd0aa",
-          "width": 34,
-          "x": 403,
-          "y": 535,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "2461fe58-ee4d-447f-abba-5c5eec3bc886",
-          "width": 34,
-          "x": 471,
-          "y": 535,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "04f685b0-a337-46c9-8c99-aa33afb44ad8",
-          "width": 34,
-          "x": 538,
-          "y": 535,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "5ead959b-e897-48ab-a35f-a9ab94f6f284",
-          "width": 34,
-          "x": 606,
-          "y": 535,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "095fddfe-ae9e-488d-84aa-dab19f4eea53",
-          "width": 34,
-          "x": 674,
-          "y": 535,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "819d5d07-b4df-478b-a3b9-dde084ea7483",
-          "width": 34,
-          "x": 742,
-          "y": 535,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "d91c4787-d48c-462f-9af1-737d14ce4938",
-          "width": 34,
-          "x": 809,
-          "y": 535,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "8b460dcd-87db-4979-920e-59e65cf21bf4",
-          "width": 34,
-          "x": 877,
-          "y": 535,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "f8b9f488-9932-4af7-b96c-2982c20719ae",
-          "width": 34,
-          "x": 369,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "32951240-9122-4af2-a94f-58c82474e945",
-          "width": 34,
-          "x": 437,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "ce090807-ed85-45d1-b06c-5982a0204208",
-          "width": 34,
-          "x": 504,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "4d98f0b9-10ae-4230-ba92-9f8496af8697",
-          "width": 34,
-          "x": 572,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "4fa79d7a-8b24-4a77-b7b8-e11622297fb3",
-          "width": 34,
-          "x": 640,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "5ef3ab40-68e6-4377-930d-6e4e75cfda17",
-          "width": 34,
-          "x": 708,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "0493e32d-e8c4-4c27-828c-661e1b428691",
-          "width": 34,
-          "x": 776,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_Gold",
-          "persistentUuid": "6fa0c8f7-b929-4a24-9191-fb667fecd78c",
-          "width": 34,
-          "x": 843,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 34,
-          "layer": "",
-          "name": "Peg_White",
-          "persistentUuid": "cc244a37-7427-4256-92db-25b9a0411612",
-          "width": 34,
-          "x": 911,
-          "y": 591,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 116,
+          "width": 125,
+          "height": 100,
           "layer": "",
           "name": "Bucket_0_5x_A",
-          "persistentUuid": "6c076dab-433f-4b15-ac34-33f9d087eadb",
-          "width": 127,
-          "x": 387,
-          "y": 662,
-          "zOrder": 3,
+          "persistentUuid": "53e0c0d8-7ad9-49a7-a152-f72dc12cc758",
+          "x": 326,
+          "y": 620,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2265,14 +1051,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 116,
+          "width": 125,
+          "height": 100,
           "layer": "",
           "name": "Bucket_1_5x_A",
-          "persistentUuid": "365ebbeb-4f73-4f23-ae51-0f9b3cc1723d",
-          "width": 127,
-          "x": 514,
-          "y": 662,
-          "zOrder": 3,
+          "persistentUuid": "a619bcc1-778a-499e-9aa1-07b3b4e8249d",
+          "x": 451,
+          "y": 620,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2281,14 +1067,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 116,
+          "width": 126,
+          "height": 100,
           "layer": "",
           "name": "Bucket_5_0x",
-          "persistentUuid": "263abc30-4394-4bf9-b0d4-7434ce218833",
-          "width": 127,
-          "x": 642,
-          "y": 662,
-          "zOrder": 3,
+          "persistentUuid": "4ff7078d-b09c-48fb-9aca-18001585cdb2",
+          "x": 576,
+          "y": 620,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2297,14 +1083,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 116,
+          "width": 125,
+          "height": 100,
           "layer": "",
           "name": "Bucket_1_5x_B",
-          "persistentUuid": "a5b890c3-d2b6-4bbd-ad26-45f9d943ce3d",
-          "width": 127,
-          "x": 769,
-          "y": 662,
-          "zOrder": 3,
+          "persistentUuid": "c918a3aa-4792-4ab5-881b-b23cd730f2fa",
+          "x": 702,
+          "y": 620,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2313,14 +1099,1342 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 116,
+          "width": 125,
+          "height": 100,
           "layer": "",
           "name": "Bucket_0_5x_B",
-          "persistentUuid": "10451a2c-6586-4d38-a780-5e7986ba12d7",
-          "width": 127,
-          "x": 896,
-          "y": 662,
-          "zOrder": 3,
+          "persistentUuid": "9ee14adf-9363-4bc9-8dab-82c54a824da7",
+          "x": 827,
+          "y": 620,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 20,
+          "height": 720,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "55cbda5f-3757-4220-bfbb-24be89c94e49",
+          "x": 306,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 20,
+          "height": 720,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "2f1fb867-aba9-4421-b0f2-691b7d52f13c",
+          "x": 954,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 668,
+          "height": 20,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "7e673d2f-91b1-46b1-a2e7-3b8b5a63509c",
+          "x": 306,
+          "y": -20,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 668,
+          "height": 20,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "3005a517-63a2-4065-bed6-b6911f93a8e7",
+          "x": 306,
+          "y": 718,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 6,
+          "height": 130,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "f225ff4b-ff31-45a4-a634-5d8c4467ba53",
+          "x": 448,
+          "y": 590,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 6,
+          "height": 130,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "a13d8976-bbb2-4483-ae38-a6e52879dd57",
+          "x": 573,
+          "y": 590,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 6,
+          "height": 130,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "3d162ad1-b688-48ba-8e00-2560b90aaa67",
+          "x": 699,
+          "y": 590,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 6,
+          "height": 130,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "ec252867-27ad-4340-a55d-a00f9523ee50",
+          "x": 824,
+          "y": 590,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "9c357ef8-3b64-4865-a9a1-46e31e1db5b8",
+          "x": 374,
+          "y": 121,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "8865c69b-fd06-4f59-9948-adfd4e712971",
+          "x": 446,
+          "y": 121,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "7c51ffea-cc38-411f-9d92-f94421a62fad",
+          "x": 518,
+          "y": 121,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "28a2c887-a7cf-4598-877b-7fd17aa0161d",
+          "x": 590,
+          "y": 121,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "0b7148e7-bc6e-43b0-94a7-54b049c64813",
+          "x": 662,
+          "y": 121,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "1e05d3db-856f-4379-80b2-1940e83fa526",
+          "x": 734,
+          "y": 121,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "cd54ddf7-3cd7-46d1-a137-a9692dcd8333",
+          "x": 806,
+          "y": 121,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "15f7a396-a895-493c-9637-84b310fdb3b1",
+          "x": 878,
+          "y": 121,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "495f1424-9c5f-457a-968c-eba06a200783",
+          "x": 410,
+          "y": 166,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "3af270f2-ecb9-4985-9f93-c256be7ad76c",
+          "x": 482,
+          "y": 166,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "945aed74-c25a-41f6-a899-89f7e8ccffc8",
+          "x": 554,
+          "y": 166,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Bomb",
+          "persistentUuid": "d92f64a7-9526-4e12-9c01-3624989c4d53",
+          "x": 626,
+          "y": 166,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "a65e5640-e731-45eb-a88b-6cfcd4d5e71f",
+          "x": 698,
+          "y": 166,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "cceb3915-c331-454a-abb8-a2537b1e1a1a",
+          "x": 770,
+          "y": 166,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "40e892de-c7e0-4422-81e9-b80507ffa0f8",
+          "x": 842,
+          "y": 166,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "f4951d08-3209-4919-9a34-9107ecb93331",
+          "x": 374,
+          "y": 211,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "1e8bb3eb-d821-46c2-978e-2ad912e49a2c",
+          "x": 446,
+          "y": 211,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "c87a3635-a211-489c-a553-6b0802f3fe2f",
+          "x": 518,
+          "y": 211,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "d37e0872-ed14-418f-8864-111558348bd6",
+          "x": 590,
+          "y": 211,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "3ae76a12-89a2-4ef6-a557-f6888f9e771a",
+          "x": 662,
+          "y": 211,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "f673d671-013e-4788-ba35-c28b353506e0",
+          "x": 734,
+          "y": 211,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "2cbe769c-c247-4d14-944a-114d606196a7",
+          "x": 806,
+          "y": 211,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "4951c59d-e36e-4e35-a0bc-47f16cf2214b",
+          "x": 878,
+          "y": 211,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "720038d1-77bd-4b91-bc86-24969fddc571",
+          "x": 410,
+          "y": 256,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "425dd626-d7bf-4ae9-a2fd-c81956fb82b2",
+          "x": 482,
+          "y": 256,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "e837daa6-4190-4c8b-b8fe-0bfca8cae0e4",
+          "x": 554,
+          "y": 256,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "99558ee9-aaf5-4afa-9e5a-849b0caae134",
+          "x": 626,
+          "y": 256,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "5efdbb73-7e04-4b90-bb52-188215e9ee92",
+          "x": 698,
+          "y": 256,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "e2160cc2-5805-409a-bcc3-be8d64c0e2d5",
+          "x": 770,
+          "y": 256,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "3ed0af25-e5e3-459a-acd4-2bc9afc9a797",
+          "x": 842,
+          "y": 256,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "b1c1794e-60d4-4e89-94cd-6615cc755763",
+          "x": 374,
+          "y": 301,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "1fbcc376-c40d-4423-96fb-052fed8d7aec",
+          "x": 446,
+          "y": 301,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "ca41c786-3f61-4cd7-b9eb-7d7336210823",
+          "x": 518,
+          "y": 301,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "4d58d818-70c2-4b11-9f76-b7c08281f403",
+          "x": 590,
+          "y": 301,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "1b4efec3-3126-4555-8eb2-e4f3fa59fe6d",
+          "x": 662,
+          "y": 301,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "31078b39-6a9e-4015-8665-01da200dc3a0",
+          "x": 734,
+          "y": 301,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "6152ecf3-8a55-454f-8c41-503fb64a22ae",
+          "x": 806,
+          "y": 301,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "204daf35-036b-43e1-9a7a-a50623d6e16a",
+          "x": 878,
+          "y": 301,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "b73db1cd-6b1b-4de5-bb9a-a78932751a4d",
+          "x": 410,
+          "y": 346,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Bomb",
+          "persistentUuid": "ada94365-2bb2-4cec-b947-6f290bafae37",
+          "x": 482,
+          "y": 346,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "ca140744-9f45-4524-b0dd-344bf2e99fc0",
+          "x": 554,
+          "y": 346,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "4aa03990-91c4-4c50-a288-bf1c713c1525",
+          "x": 626,
+          "y": 346,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "6228bebb-9004-4e0c-8a53-ac7ca2fa2fa3",
+          "x": 698,
+          "y": 346,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Bomb",
+          "persistentUuid": "11b58bf6-e6af-4cf3-94ce-db3f4f52b3dd",
+          "x": 770,
+          "y": 346,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "72a1aaf4-b1f8-424d-90cf-9695329db3e0",
+          "x": 842,
+          "y": 346,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "16388b28-1291-4f1e-9e9d-5565c6245f92",
+          "x": 374,
+          "y": 391,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "532afe9b-8697-49a4-98a5-41a9bb3982df",
+          "x": 446,
+          "y": 391,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "d621d526-49d5-4428-a076-56d6ce0296d5",
+          "x": 518,
+          "y": 391,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "2947833e-6ea7-459a-87ed-d3a1265ccb80",
+          "x": 590,
+          "y": 391,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "ab5ed02d-b6b2-446a-8c80-fc2a2644ef68",
+          "x": 662,
+          "y": 391,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "05a7154b-a5c3-4aa3-9308-cb881159d11b",
+          "x": 734,
+          "y": 391,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "5e493f77-2aea-4b8b-ae9c-02a618f9d366",
+          "x": 806,
+          "y": 391,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "6293ee78-596e-42be-a934-1deccb0e9619",
+          "x": 878,
+          "y": 391,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "0c5f49ad-d08b-401d-94f8-cf697c74532c",
+          "x": 410,
+          "y": 436,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "6e072252-02ce-49fb-aade-e69503af9999",
+          "x": 482,
+          "y": 436,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "c29dc52f-c778-4448-9246-ec4c63a6dbe7",
+          "x": 554,
+          "y": 436,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "e05f6582-c87f-4094-9049-6b372eee6a4d",
+          "x": 626,
+          "y": 436,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "03121f51-6709-4676-ac7d-8b0c99900f37",
+          "x": 698,
+          "y": 436,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "0ae74215-712a-4138-89f2-9ab6276fc742",
+          "x": 770,
+          "y": 436,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "2d07e8e4-d467-4661-ada4-6dbb8bc12ad9",
+          "x": 842,
+          "y": 436,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "126ffbbd-9ef1-41a9-811c-d45ef781f125",
+          "x": 374,
+          "y": 481,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "f70e6274-c61c-4546-8d99-14c59fc2f415",
+          "x": 446,
+          "y": 481,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "e3ee2cf0-ac84-4451-b839-15823ccc09c0",
+          "x": 518,
+          "y": 481,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Bomb",
+          "persistentUuid": "cb9d1414-108b-4ba3-809d-287e10fcbb39",
+          "x": 590,
+          "y": 481,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "c8b5f8ae-1d6c-4bba-a3b3-d3dd637bf85a",
+          "x": 662,
+          "y": 481,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "8f65074e-f840-46eb-bcd4-c9c3d1d458a0",
+          "x": 734,
+          "y": 481,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "2cbc3140-ca9a-4c73-bc6a-57e2d019ffc1",
+          "x": 806,
+          "y": 481,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "939af82a-3906-4ec5-baad-b06b276dc1a0",
+          "x": 878,
+          "y": 481,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "519be8ba-3e57-4ad8-b3d0-6d59c95096a7",
+          "x": 410,
+          "y": 526,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "1fb09d12-143a-4b6f-89e5-014da3ec9280",
+          "x": 482,
+          "y": 526,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "ae6ee5dd-6184-4edb-9950-24eb76066c7b",
+          "x": 554,
+          "y": 526,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "5508c18b-3f3f-4efb-a1f8-78730c55eb25",
+          "x": 626,
+          "y": 526,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "8ca50ffe-e3e7-4e77-97c3-9588f215d3ca",
+          "x": 698,
+          "y": 526,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "ffbf2347-77fd-44bd-9919-0ecdf361128c",
+          "x": 770,
+          "y": 526,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "width": 28,
+          "height": 28,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "585d857b-17f0-44cf-9f55-1e29d6b17757",
+          "x": 842,
+          "y": 526,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2439,14 +2553,14 @@
               "fixedRotation": false,
               "canSleep": true,
               "shape": "Circle",
-              "shapeDimensionA": 0,
+              "shapeDimensionA": 10,
               "shapeDimensionB": 0,
               "shapeOffsetX": 0,
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 2,
-              "friction": 0.3,
+              "density": 1.5,
+              "friction": 0.1,
               "restitution": 0.8,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
@@ -2504,14 +2618,14 @@
               "fixedRotation": false,
               "canSleep": true,
               "shape": "Circle",
-              "shapeDimensionA": 0,
+              "shapeDimensionA": 10,
               "shapeDimensionB": 0,
               "shapeOffsetX": 0,
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 1,
-              "friction": 0.3,
+              "density": 1.0,
+              "friction": 0.1,
               "restitution": 0.95,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
@@ -2569,14 +2683,14 @@
               "fixedRotation": false,
               "canSleep": true,
               "shape": "Circle",
-              "shapeDimensionA": 0,
+              "shapeDimensionA": 10,
               "shapeDimensionB": 0,
               "shapeOffsetX": 0,
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 1,
-              "friction": 0.3,
+              "density": 1.0,
+              "friction": 0.1,
               "restitution": 0.95,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
@@ -2634,14 +2748,14 @@
               "fixedRotation": false,
               "canSleep": true,
               "shape": "Circle",
-              "shapeDimensionA": 0,
+              "shapeDimensionA": 10,
               "shapeDimensionB": 0,
               "shapeOffsetX": 0,
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 1,
-              "friction": 0.3,
+              "density": 1.0,
+              "friction": 0.1,
               "restitution": 0.95,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
@@ -2851,6 +2965,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Bucket_0_5x_B",
+          "persistentUuid": "d76c1eaa-e680-4a02-9762-152fac5ae99d",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -2912,9 +3027,9 @@
               "shapeOffsetY": 0,
               "polygonOrigin": "Center",
               "vertices": [],
-              "density": 1,
-              "friction": 0.3,
-              "restitution": 0.5,
+              "density": 1.0,
+              "friction": 0.1,
+              "restitution": 0.6,
               "linearDamping": 0.1,
               "angularDamping": 0.1,
               "gravityScale": 1,
@@ -3214,7 +3329,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Goblin",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -3224,6 +3339,64 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets/boss1_goblin_guard.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Slime",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets/boss2_slime_brute.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Dragon",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets/boss3_dragon_landlord.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4174,117 +4347,256 @@
       "events": [
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "--- PLINKO DUNGEON ENGINE ---",
-          "comment2": "Authentic Box2D Pachinko Roguelike"
+          "comment": "=== 1. SCENE INITIALIZATION ==="
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "SceneJustBegins"
+                "value": "DepartScene"
               },
-              "parameters": [
-                ""
-              ]
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "PlaySoundCanLoop"
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerHP",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Wager",
+                "=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "CurrentRound",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "=",
+                "60"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossMaxHP",
+                "=",
+                "60"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossCounter",
+                "=",
+                "8"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Multiplier",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TurnTimer",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Round",
+                "Text",
+                "=",
+                "\"ROUND 1 / 3\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossName",
+                "Text",
+                "=",
+                "\"GOBLIN GUARD\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: 60 / 60\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossCounter",
+                "Text",
+                "=",
+                "\"COUNTER: 8 DMG\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerHP_Label",
+                "Text",
+                "=",
+                "\"PLAYER HP: 100\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ 100\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Ante",
+                "Text",
+                "=",
+                "\"ANTE  $10\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_HighRoller",
+                "Text",
+                "=",
+                "\"HIGH ROLLER $25\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"AIM WITH A/D OR ARROWS, PRESS SPACE TO DROP!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "220"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundCanal"
               },
               "parameters": [
                 "",
                 "assets/bgm_chiptune.wav",
+                "0",
                 "yes",
                 "40",
-                "1"
+                "1.0"
               ]
             }
           ]
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "--- DROPPER AIMING (A / D & LEFT / RIGHT ARROWS) ---"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"a\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Dropper",
-                "-",
-                "500 * TimeDelta()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"A\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Dropper",
-                "-",
-                "500 * TimeDelta()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Left\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Dropper",
-                "-",
-                "500 * TimeDelta()"
-              ]
-            }
-          ]
+          "comment": "=== 2. DROPPER AIMING (A / D & LEFT / RIGHT) ==="
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4343,84 +4655,6 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"d\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Dropper",
-                "+",
-                "500 * TimeDelta()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"D\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Dropper",
-                "+",
-                "500 * TimeDelta()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Right\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "Dropper",
-                "+",
-                "500 * TimeDelta()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "KeyPressed"
               },
               "parameters": [
@@ -4469,10 +4703,6 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Comment",
-          "comment": "Keep Dropper Clamped to Inner Square Edges & Sync Aim Dots"
-        },
-        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -4500,7 +4730,7 @@
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "--- WAGER SWITCHING (1 / 2) ---"
+          "comment": "=== 3. WAGER TOGGLE (1: $10 / 2: $25) ==="
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4578,7 +4808,7 @@
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "--- SHOOT / DROP KINETIC ORB (SPACEBAR or DOWN ARROW) ---"
+          "comment": "=== 4. SHOOT / DROP KINETIC ORB (SPACEBAR) ==="
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4597,9 +4827,80 @@
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(PlayerChips)",
+                ">=",
+                "Variable(Wager)"
+              ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "-",
+                "Variable(Wager)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(Variable(PlayerChips))"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Multiplier",
+                "=",
+                "1"
+              ]
+            },
             {
               "type": {
                 "value": "Create"
@@ -4631,17 +4932,7 @@
                 "assets/sfx_orb_release.wav",
                 "",
                 "70",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "PlayerChips",
-                "-",
-                "Wager"
+                "1.0"
               ]
             },
             {
@@ -4649,10 +4940,10 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "Txt_PlayerChips",
+                "Txt_Banner",
                 "Text",
                 "=",
-                "\"$ \" + ToString(PlayerChips)"
+                "\"\""
               ]
             }
           ]
@@ -4674,9 +4965,80 @@
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(PlayerChips)",
+                ">=",
+                "Variable(Wager)"
+              ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "-",
+                "Variable(Wager)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(Variable(PlayerChips))"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Multiplier",
+                "=",
+                "1"
+              ]
+            },
             {
               "type": {
                 "value": "Create"
@@ -4708,17 +5070,7 @@
                 "assets/sfx_orb_release.wav",
                 "",
                 "70",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "PlayerChips",
-                "-",
-                "Wager"
+                "1.0"
               ]
             },
             {
@@ -4726,17 +5078,17 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "Txt_PlayerChips",
+                "Txt_Banner",
                 "Text",
                 "=",
-                "\"$ \" + ToString(PlayerChips)"
+                "\"\""
               ]
             }
           ]
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
-          "comment": "--- PEG COLLISIONS ---"
+          "comment": "=== 5. PEG COLLISIONS ==="
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4773,7 +5125,7 @@
                 "assets/sfx_peg_ding.wav",
                 "",
                 "55",
-                "1.0 + (AccumulatedDamage * 0.05)"
+                "min(2.5, 1.0 + (Variable(AccumulatedDamage) * 0.05))"
               ]
             }
           ]
@@ -4813,7 +5165,7 @@
                 "assets/sfx_peg_ding.wav",
                 "",
                 "65",
-                "1.6"
+                "1.8"
               ]
             }
           ]
@@ -4854,6 +5206,1926 @@
                 "",
                 "80",
                 "1.0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "=== 6. BUCKET LANDING & DAMAGE RESOLUTION ==="
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Orb",
+                ">=",
+                "615"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Orb.X()",
+                ">=",
+                "573"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Orb.X()",
+                "<",
+                "699"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TurnTimer",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ChipsWon",
+                "=",
+                "Variable(Wager) * 5"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "DamageDealt",
+                "=",
+                "Variable(AccumulatedDamage) * Variable(Multiplier) * 5"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_jackpot_chime.wav",
+                "",
+                "85",
+                "1.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"\u2605 5.0x JACKPOT! +$\" + ToString(Variable(ChipsWon)) + \" / \" + ToString(Variable(DamageDealt)) + \" DMG! \u2605\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "+",
+                "Variable(ChipsWon)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "-",
+                "Variable(DamageDealt)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(Variable(PlayerChips))"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: \" + ToString(max(0, Variable(BossHP))) + \" / \" + ToString(Variable(BossMaxHP))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "clamp(220 * (max(0, Variable(BossHP)) / Variable(BossMaxHP)), 0, 220)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_boss_hurt.wav",
+                "",
+                "70",
+                "1.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Orb"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Orb",
+                ">=",
+                "615"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Orb.X()",
+                ">=",
+                "448"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Orb.X()",
+                "<",
+                "573"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TurnTimer",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ChipsWon",
+                "=",
+                "round(Variable(Wager) * 1.5)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "DamageDealt",
+                "=",
+                "round(Variable(AccumulatedDamage) * Variable(Multiplier) * 1.5)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_peg_ding.wav",
+                "",
+                "65",
+                "1.3"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"1.5x BUCKET! +$\" + ToString(Variable(ChipsWon)) + \" / \" + ToString(Variable(DamageDealt)) + \" DMG!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "+",
+                "Variable(ChipsWon)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "-",
+                "Variable(DamageDealt)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(Variable(PlayerChips))"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: \" + ToString(max(0, Variable(BossHP))) + \" / \" + ToString(Variable(BossMaxHP))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "clamp(220 * (max(0, Variable(BossHP)) / Variable(BossMaxHP)), 0, 220)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_boss_hurt.wav",
+                "",
+                "70",
+                "1.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Orb"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Orb",
+                ">=",
+                "615"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Orb.X()",
+                ">=",
+                "699"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Orb.X()",
+                "<",
+                "824"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TurnTimer",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ChipsWon",
+                "=",
+                "round(Variable(Wager) * 1.5)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "DamageDealt",
+                "=",
+                "round(Variable(AccumulatedDamage) * Variable(Multiplier) * 1.5)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_peg_ding.wav",
+                "",
+                "65",
+                "1.3"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"1.5x BUCKET! +$\" + ToString(Variable(ChipsWon)) + \" / \" + ToString(Variable(DamageDealt)) + \" DMG!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "+",
+                "Variable(ChipsWon)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "-",
+                "Variable(DamageDealt)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(Variable(PlayerChips))"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: \" + ToString(max(0, Variable(BossHP))) + \" / \" + ToString(Variable(BossMaxHP))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "clamp(220 * (max(0, Variable(BossHP)) / Variable(BossMaxHP)), 0, 220)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_boss_hurt.wav",
+                "",
+                "70",
+                "1.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Orb"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Orb",
+                ">=",
+                "615"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Orb.X()",
+                "<",
+                "448"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TurnTimer",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ChipsWon",
+                "=",
+                "round(Variable(Wager) * 0.5)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "DamageDealt",
+                "=",
+                "max(1, round(Variable(AccumulatedDamage) * Variable(Multiplier) * 0.5))"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_peg_ding.wav",
+                "",
+                "60",
+                "1.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"0.5x BUCKET! +$\" + ToString(Variable(ChipsWon)) + \" / \" + ToString(Variable(DamageDealt)) + \" DMG!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "+",
+                "Variable(ChipsWon)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "-",
+                "Variable(DamageDealt)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(Variable(PlayerChips))"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: \" + ToString(max(0, Variable(BossHP))) + \" / \" + ToString(Variable(BossMaxHP))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "clamp(220 * (max(0, Variable(BossHP)) / Variable(BossMaxHP)), 0, 220)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_boss_hurt.wav",
+                "",
+                "70",
+                "1.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Orb"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PosY"
+              },
+              "parameters": [
+                "Orb",
+                ">=",
+                "615"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Orb.X()",
+                ">=",
+                "824"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TurnTimer",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "ChipsWon",
+                "=",
+                "round(Variable(Wager) * 0.5)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "DamageDealt",
+                "=",
+                "max(1, round(Variable(AccumulatedDamage) * Variable(Multiplier) * 0.5))"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_peg_ding.wav",
+                "",
+                "60",
+                "1.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"0.5x BUCKET! +$\" + ToString(Variable(ChipsWon)) + \" / \" + ToString(Variable(DamageDealt)) + \" DMG!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "+",
+                "Variable(ChipsWon)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "-",
+                "Variable(DamageDealt)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(Variable(PlayerChips))"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: \" + ToString(max(0, Variable(BossHP))) + \" / \" + ToString(Variable(BossMaxHP))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "clamp(220 * (max(0, Variable(BossHP)) / Variable(BossMaxHP)), 0, 220)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_boss_hurt.wav",
+                "",
+                "70",
+                "1.0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Orb"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "=== 7. TURN TIMER & BOSS COMBAT RESOLUTION ==="
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TurnTimer",
+                "+",
+                "TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(TurnTimer)",
+                ">=",
+                "1.2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(BossHP)",
+                "<=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(CurrentRound)",
+                "=",
+                "1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "CurrentRound",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "=",
+                "120"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossMaxHP",
+                "=",
+                "120"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossCounter",
+                "=",
+                "12"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Boss",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Round",
+                "Text",
+                "=",
+                "\"ROUND 2 / 3\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossName",
+                "Text",
+                "=",
+                "\"SLIME BRUTE\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: 120 / 120\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossCounter",
+                "Text",
+                "=",
+                "\"COUNTER: 12 DMG\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "220"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"BOSS 1 DEFEATED! ENTERING ROUND 2: SLIME BRUTE!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_jackpot_chime.wav",
+                "",
+                "80",
+                "1.0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(TurnTimer)",
+                ">=",
+                "1.2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(BossHP)",
+                "<=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(CurrentRound)",
+                "=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "CurrentRound",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "=",
+                "200"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossMaxHP",
+                "=",
+                "200"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossCounter",
+                "=",
+                "16"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Boss",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Round",
+                "Text",
+                "=",
+                "\"ROUND 3 / 3 (FINAL BOSS)\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossName",
+                "Text",
+                "=",
+                "\"DRAGON LANDLORD\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: 200 / 200\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossCounter",
+                "Text",
+                "=",
+                "\"COUNTER: 16 DMG\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "220"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"BOSS 2 DEFEATED! FINAL BATTLE: DRAGON LANDLORD!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_jackpot_chime.wav",
+                "",
+                "80",
+                "1.0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(TurnTimer)",
+                ">=",
+                "1.2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(BossHP)",
+                "<=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(CurrentRound)",
+                ">=",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "4"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"\ud83c\udfc6 VICTORY! YOU CONQUERED PLINKO DUNGEON! (PRESS SPACE TO REPLAY)\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_jackpot_chime.wav",
+                "",
+                "90",
+                "1.0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(TurnTimer)",
+                ">=",
+                "1.2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(BossHP)",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerHP",
+                "-",
+                "Variable(BossCounter)"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerHP_Label",
+                "Text",
+                "=",
+                "\"PLAYER HP: \" + ToString(max(0, Variable(PlayerHP)))"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_player_hurt.wav",
+                "",
+                "75",
+                "1.0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(TurnTimer)",
+                ">=",
+                "1.2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(BossHP)",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(PlayerHP)",
+                "<=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"\ud83d\udc80 GAME OVER! THE DUNGEON TOOK YOUR SOUL! (PRESS SPACE TO RESTART)\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(TurnTimer)",
+                ">=",
+                "1.2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(BossHP)",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(PlayerChips)",
+                "<",
+                "10"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"\ud83d\udc80 BANKRUPT! YOU RAN OUT OF CHIPS! (PRESS SPACE TO RESTART)\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(TurnTimer)",
+                ">=",
+                "1.2"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(BossHP)",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(PlayerHP)",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(PlayerChips)",
+                ">=",
+                "10"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Multiplier",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"BOSS COUNTER-ATTACK! -\" + ToString(Variable(BossCounter)) + \" HP!\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "=== 8. RESTART ON GAME OVER OR VICTORY ==="
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Space"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "Variable(GameState)",
+                ">=",
+                "3"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerHP",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "PlayerChips",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Wager",
+                "=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "CurrentRound",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossHP",
+                "=",
+                "60"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossMaxHP",
+                "=",
+                "60"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "BossCounter",
+                "=",
+                "8"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Multiplier",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "TurnTimer",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Boss",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Round",
+                "Text",
+                "=",
+                "\"ROUND 1 / 3\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossName",
+                "Text",
+                "=",
+                "\"GOBLIN GUARD\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP: 60 / 60\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossCounter",
+                "Text",
+                "=",
+                "\"COUNTER: 8 DMG\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerHP_Label",
+                "Text",
+                "=",
+                "\"PLAYER HP: 100\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ 100\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Banner",
+                "Text",
+                "=",
+                "\"ROUND 1: DEFEAT THE GOBLIN GUARD!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetWidth"
+              },
+              "parameters": [
+                "UI_HP_Fill",
+                "=",
+                "220"
               ]
             }
           ]
