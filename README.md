@@ -2,8 +2,8 @@
 
 > **IMT01306618 Games Development | Odd Semester 2026/2027**  
 > **Author:** Sean Tandjaja  
-> **Engine:** GDevelop 5 (Physics 2.0 Box2D) & Standalone HTML5 Canvas  
-> **Live Demo:** Open `index.html` in any web browser or deploy with GitHub Pages!
+> **Engine:** GDevelop 5 (Physics 2.0 Box2D)  
+> **Project File:** `Plinko Dungeon.json`
 
 ![Plinko Dungeon Mockup](screen_mockup_1280x720.png)
 
@@ -15,9 +15,9 @@ A 3-minute single-player physics-pachinko dungeon duel where you drop kinetic or
 ---
 
 ## 🎮 Core Game Loop
-1. **Aim**: Position the dropper horizontally across the top rail (`[A]` / `[D]`, Arrow Keys, or Mouse).
+1. **Aim**: Position the dropper horizontally across the top rail (`[A]` / `[D]` or Arrow Keys).
 2. **Wager**: Choose your ante bet before dropping:
-   - `[1]` **Standard Ante ($10)**: Safe, consistent play.
+   - `[1]` **Standard Ante ($10)**: Safe, steady play.
    - `[2]` **High Roller ($25)**: High risk, exponential jackpot rewards!
 3. **Drop**: Release your kinetic orb into the pegboard (`[SPACE]` or Left Click).
 4. **Cascade**: The orb bounces off pegs with Box2D elastic physics:
@@ -60,21 +60,16 @@ A 3-minute single-player physics-pachinko dungeon duel where you drop kinetic or
 |---|---|
 | **Move Dropper Left** | `[A]` or `[Left Arrow]` |
 | **Move Dropper Right** | `[D]` or `[Right Arrow]` |
-| **Mouse Aim** | Hover cursor over playfield |
-| **Drop Orb** | `[SPACE]` or `[Left Click]` |
-| **Select Standard Ante ($10)** | `[1]` or Click Ante Button |
-| **Select High Roller ($25)** | `[2]` or Click High Roller Button |
-| **Toggle Audio** | Click `🔊 Sound: ON/OFF` button |
-| **Restart Game** | `[SPACE]` on Game Over / Victory screen |
+| **Drop Orb** | `[SPACE]` |
+| **Select Standard Ante ($10)** | `[1]` |
+| **Select High Roller ($25)** | `[2]` |
 
 ---
 
 ## 📁 Repository Structure
 ```
 Plinko Dungeon/
-├── index.html                   ← Standalone playable HTML5 build (Browser / GitHub Pages)
-├── game.json                    ← GDevelop 5 master project definition
-├── Plinko Dungeon.json          ← GDevelop 5 alternative project load file
+├── Plinko Dungeon.json          ← GDevelop 5 master project definition
 ├── screen_mockup_1280x720.png   ← 1280x720 art & layout reference
 ├── asset_preview.png            ← Asset preview sheet
 ├── README.md                    ← Game design & repository documentation
@@ -109,27 +104,8 @@ Plinko Dungeon/
 
 ---
 
-## 🚀 How to Run the Game
-
-### Option 1: Standalone Web Play (Instant)
-1. Double-click `index.html` in Finder / File Explorer to open in Chrome, Safari, or Edge.
-2. Or serve locally with any web server:
-   ```bash
-   npx serve .
-   # or
-   python3 -m http.server 8080
-   ```
-3. Open `http://localhost:8080` in your browser.
-
-### Option 2: GDevelop 5 Project
+## 🚀 How to Run in GDevelop 5
 1. Open **GDevelop 5**.
-2. Click **Open a project** and navigate to this folder.
-3. Select `game.json` or `Plinko Dungeon.json`.
-4. Click the **Preview** button (play icon) in the top toolbar to launch the Box2D physics simulation.
-
----
-
-## 🎨 Art & Audio Direction
-- **Sprites**: 32×32 pixel art with a 16-colour retro arcade palette (vibrant neon arcade on dark slate dungeon stone).
-- **Viewport**: 1280×720 single fixed viewport with zero camera scrolling.
-- **Audio**: 1 background chiptune track (130 BPM, retro casino bassline, driving percussion, synth lead) and 7 synthesized sound effects with pitch-scaled combos.
+2. Click **Open a project** (or select from Recent Projects).
+3. Select `Plinko Dungeon.json`.
+4. Click the **Preview** button (play icon) in the top toolbar.
