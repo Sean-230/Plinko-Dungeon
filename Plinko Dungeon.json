@@ -1,0 +1,5494 @@
+{
+  "firstLayout": "Game",
+  "gdVersion": {
+    "build": 283,
+    "major": 5,
+    "minor": 6,
+    "revision": 0
+  },
+  "initialGDVersion": "5.6.283",
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "antialiasingMode": "none",
+    "antialisingEnabledOnMobile": false,
+    "folderProject": false,
+    "orientation": "landscape",
+    "packageName": "com.seantandjaja.plinkodungeon",
+    "pixelsRounding": true,
+    "projectUuid": "23b19eb7-8436-48f6-9092-bd8238b9b043",
+    "scaleMode": "nearest",
+    "sizeOnStartupMode": "adaptWidth",
+    "templateSlug": "",
+    "version": "1.0.0",
+    "name": "Plinko Dungeon",
+    "description": "Plinko Dungeon: A single-player physics-pachinko dungeon duel roguelike built for IMT01306618 Games Development.",
+    "author": "Sean Tandjaja",
+    "windowWidth": 1280,
+    "windowHeight": 720,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": false,
+      "showProgressBar": true
+    },
+    "watermark": {
+      "placement": "bottom-left",
+      "showWatermark": false
+    },
+    "authorIds": [],
+    "authorUsernames": [],
+    "categories": [
+      "action",
+      "arcade"
+    ],
+    "playableDevices": [
+      "keyboard",
+      "mouse"
+    ],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "file": "assets/dropper.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "dropper.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/peg_standard_white.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "peg_standard_white.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/peg_multiplier_gold.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "peg_multiplier_gold.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/peg_bomb_red.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "peg_bomb_red.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bucket_0_5x_a.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bucket_0_5x_a.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bucket_1_5x_a.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bucket_1_5x_a.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bucket_5_0x.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bucket_5_0x.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bucket_1_5x_b.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bucket_1_5x_b.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bucket_0_5x_b.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bucket_0_5x_b.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/orb_standard_iron.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "orb_standard_iron.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/orb_bouncy_slime.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "orb_bouncy_slime.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/orb_heavy_boulder.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "orb_heavy_boulder.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/boss1_goblin_guard.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "boss1_goblin_guard.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/boss2_slime_brute.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "boss2_slime_brute.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/boss3_dragon_landlord.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "boss3_dragon_landlord.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/torch_f1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "torch_f1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/torch_f2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "torch_f2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/ui_heart.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ui_heart.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/ui_chip.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ui_chip.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/wall_brick.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "wall_brick.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/wall_mossy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "wall_mossy.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx_dropper_move.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_dropper_move.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx_orb_release.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_orb_release.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx_peg_ding.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_peg_ding.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx_bomb_explosion.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_bomb_explosion.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx_jackpot_chime.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_jackpot_chime.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx_boss_hurt.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_boss_hurt.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/sfx_player_hurt.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sfx_player_hurt.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "assets/bgm_chiptune.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "bgm_chiptune.wav",
+        "preloadAsMusic": true,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      }
+    ]
+  },
+  "objects": [],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT"
+  },
+  "objectsGroups": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "PlayerHP",
+      "type": "number",
+      "value": 100
+    },
+    {
+      "folded": true,
+      "name": "PlayerChips",
+      "type": "number",
+      "value": 100
+    },
+    {
+      "folded": true,
+      "name": "Wager",
+      "type": "number",
+      "value": 10
+    },
+    {
+      "folded": true,
+      "name": "CurrentRound",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "folded": true,
+      "name": "BossHP",
+      "type": "number",
+      "value": 60
+    },
+    {
+      "folded": true,
+      "name": "BossMaxHP",
+      "type": "number",
+      "value": 60
+    },
+    {
+      "folded": true,
+      "name": "BossCounter",
+      "type": "number",
+      "value": 8
+    },
+    {
+      "folded": true,
+      "name": "AccumulatedDamage",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "Multiplier",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "folded": true,
+      "name": "GameState",
+      "type": "string",
+      "value": "aiming"
+    }
+  ],
+  "layouts": [
+    {
+      "b": 15,
+      "r": 18,
+      "v": 24,
+      "disableInputWhenNotFocused": false,
+      "mangledName": "Game",
+      "name": "Game",
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "Plinko Dungeon - Main Game",
+      "uiSettings": {
+        "grid": true,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.2,
+        "snap": true,
+        "zoomFactor": 1.0,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "3bcca96f-1377-48d7-92eb-6cceb5de162d",
+          "width": 64,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "c03f03d8-e618-4758-a86b-5b935558ab7c",
+          "width": 64,
+          "x": 64,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "74f8f10d-5b40-4ab0-b8af-b311aa78d53c",
+          "width": 64,
+          "x": 128,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "f78deb2a-956f-46c7-87d4-547c2e9960e7",
+          "width": 64,
+          "x": 192,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "c14ad6d0-c707-48d8-be4b-84d71ef281a7",
+          "width": 64,
+          "x": 256,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "2851240f-eadd-4976-ac9d-481c02798813",
+          "width": 64,
+          "x": 960,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "db59e3d8-665b-49f6-9431-42300104a0ff",
+          "width": 64,
+          "x": 1024,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "d1308bee-298a-4893-a469-7681e82908bb",
+          "width": 64,
+          "x": 1088,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "2ccd4f72-2445-458a-aadf-9d90d7a7974b",
+          "width": 64,
+          "x": 1152,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "b15d453f-4edf-4e74-86fc-c821bf3a7b7f",
+          "width": 64,
+          "x": 1216,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "ed16e147-0d25-47f3-a603-2cca104ddc6a",
+          "width": 64,
+          "x": 0,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "c84d05ef-b202-4165-994c-8b91fe44d1d8",
+          "width": 64,
+          "x": 64,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "2ad09cb6-cf4a-43a7-ae5d-024680036c07",
+          "width": 64,
+          "x": 128,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "a4c75452-7e47-4407-b12e-ef1d883418b9",
+          "width": 64,
+          "x": 192,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "f2907e45-b110-45d2-921a-c9e4a71b0930",
+          "width": 64,
+          "x": 256,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "409592d7-d4a3-4159-99f2-944c55267100",
+          "width": 64,
+          "x": 960,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "d5d3851a-162a-47f2-923f-0454302dbcd2",
+          "width": 64,
+          "x": 1024,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "86c1931e-8744-45a3-8935-13639593edb3",
+          "width": 64,
+          "x": 1088,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "c931e147-598e-4025-9a75-a98844a74ec4",
+          "width": 64,
+          "x": 1152,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "3a43ae7f-735b-4597-b55e-92a39864cc6b",
+          "width": 64,
+          "x": 1216,
+          "y": 64,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "30ae3a69-3a73-407a-a204-23565eb0801f",
+          "width": 64,
+          "x": 0,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "51377405-66bb-4c79-b259-2d9ea8fc0d7e",
+          "width": 64,
+          "x": 64,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "605ee478-d8af-410d-8c4d-5f1ab35dff04",
+          "width": 64,
+          "x": 128,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "bc8fa163-10c0-43d7-a55d-62b98a945e7a",
+          "width": 64,
+          "x": 192,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "f8fd5229-2141-4212-b04d-6da38afaae02",
+          "width": 64,
+          "x": 256,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "95596255-c2b1-4fea-ace0-33d6ac91d6c3",
+          "width": 64,
+          "x": 960,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "97398ee2-6028-4e55-b159-348b73f5967f",
+          "width": 64,
+          "x": 1024,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "165ff051-4087-4474-9300-f12684b024bd",
+          "width": 64,
+          "x": 1088,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "5e26b8ac-6dc6-4953-a1c3-20fc04ca9d3a",
+          "width": 64,
+          "x": 1152,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "2343235a-c7f1-486a-9240-7c564dd0d635",
+          "width": 64,
+          "x": 1216,
+          "y": 128,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "17421d76-619a-4d23-a1ac-d31e9bb97123",
+          "width": 64,
+          "x": 0,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "6fe11160-125b-4cf8-aff4-ee8ab74e6e53",
+          "width": 64,
+          "x": 64,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "820c112c-a22c-4246-9271-d1323952aa33",
+          "width": 64,
+          "x": 128,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "0afee2a4-9a50-4d26-86c6-a6582bc94a75",
+          "width": 64,
+          "x": 192,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "ca63381b-7b20-4508-bd75-dda1081d13a0",
+          "width": 64,
+          "x": 256,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "73d79efa-c280-48d3-b3f8-6e3e40762f89",
+          "width": 64,
+          "x": 960,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "7dc4087a-d525-4d02-874d-2d8fe0b88bae",
+          "width": 64,
+          "x": 1024,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "117fff42-3da1-439a-8606-d1d4e745fa0c",
+          "width": 64,
+          "x": 1088,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "dbf027b0-f8bd-4b37-bc0c-7a273c853c5d",
+          "width": 64,
+          "x": 1152,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "c0bd69ea-8fe1-4aac-a1a9-697fa9f80280",
+          "width": 64,
+          "x": 1216,
+          "y": 192,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "b62f8acb-3557-4277-a1eb-6a426c1a8465",
+          "width": 64,
+          "x": 0,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "45b69db1-c06e-47ee-9c53-dedddcd6d9b0",
+          "width": 64,
+          "x": 64,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "0a9ace20-2e98-4ce2-bb9a-9758d7a87f30",
+          "width": 64,
+          "x": 128,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "cd0cc042-59b6-4145-bf1b-b4ef86929577",
+          "width": 64,
+          "x": 192,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "ee58f47c-3df5-46e1-8861-b19a579f66a1",
+          "width": 64,
+          "x": 256,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "a4ce9526-4330-4749-9589-05345489cd43",
+          "width": 64,
+          "x": 960,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "80ebf30d-288e-4a6e-a97a-e0e3d84ae4ee",
+          "width": 64,
+          "x": 1024,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "f5d86de0-a211-426b-b3f3-c8900b47b239",
+          "width": 64,
+          "x": 1088,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "e5cec38e-fec3-49c8-8c18-af3a9f7623d6",
+          "width": 64,
+          "x": 1152,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "cfe0f7e6-21e5-4923-bf6b-cbd3e83eebef",
+          "width": 64,
+          "x": 1216,
+          "y": 256,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "74e26ca0-1680-4b77-8485-bb787c63347c",
+          "width": 64,
+          "x": 0,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "935b5a17-68e0-490c-8552-8906eaf94561",
+          "width": 64,
+          "x": 64,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "07cf39be-8a58-4c7c-8210-6e98aebf2848",
+          "width": 64,
+          "x": 128,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "4caa5de1-9b57-41e0-abba-9f8f1941b962",
+          "width": 64,
+          "x": 192,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "cc74a544-5d07-4da1-9b86-79c170d6f8a8",
+          "width": 64,
+          "x": 256,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "e48b19fe-e135-4bec-8716-83a00840bd27",
+          "width": 64,
+          "x": 960,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "0d055107-a96d-4f55-bd49-fc1da332ae3c",
+          "width": 64,
+          "x": 1024,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "88bc3323-c297-4942-a9be-811d33a083e6",
+          "width": 64,
+          "x": 1088,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "1eb260dc-df0e-4a23-a9c5-ecb87e2586f1",
+          "width": 64,
+          "x": 1152,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "bc65a3b1-af89-4a3f-b694-cae8e82ae9aa",
+          "width": 64,
+          "x": 1216,
+          "y": 320,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "be282f9b-c81e-4144-a167-697daa351754",
+          "width": 64,
+          "x": 0,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "8cfb0df1-74ce-4b0a-b99f-45abfbfb53fa",
+          "width": 64,
+          "x": 64,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "9381e8e3-543f-4cfc-926b-fc2ceaa60678",
+          "width": 64,
+          "x": 128,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "44a0597b-c4de-4437-99f3-b2ce13966730",
+          "width": 64,
+          "x": 192,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "d60616a1-0023-464f-82f1-b9a1f26e624b",
+          "width": 64,
+          "x": 256,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "fe403026-5c91-49f9-a45f-dc44a1b1f071",
+          "width": 64,
+          "x": 960,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "b08e3712-3042-4581-9338-d2772c8701ea",
+          "width": 64,
+          "x": 1024,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "ebd7cd25-2570-4c1d-a0cb-085307344747",
+          "width": 64,
+          "x": 1088,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "3226c397-fd8d-41df-a6eb-6c6e47b49dd6",
+          "width": 64,
+          "x": 1152,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "79b36d82-f16d-45e9-959c-9d84c44169f2",
+          "width": 64,
+          "x": 1216,
+          "y": 384,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "81357c2f-e052-4591-926c-27ed74a075f2",
+          "width": 64,
+          "x": 0,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "90ba6c6e-94e9-4da7-8e95-c79ba0ef5b49",
+          "width": 64,
+          "x": 64,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "65962f8c-0f14-4d5a-a8b0-b064269ae618",
+          "width": 64,
+          "x": 128,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "11e75ba9-b8f4-4187-a536-611063a5695e",
+          "width": 64,
+          "x": 192,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "c958d394-f4f2-48f2-a4f2-39a51f39df75",
+          "width": 64,
+          "x": 256,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "8c2c5bb5-0a87-464b-a197-598dff9fb084",
+          "width": 64,
+          "x": 960,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "debe2756-dd09-4bb0-82c6-b8488cc99030",
+          "width": 64,
+          "x": 1024,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "9e221f42-1c2f-4a3a-829c-e4abd8c2cadf",
+          "width": 64,
+          "x": 1088,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "d8d29057-51ca-49f8-84d4-08c3f4690f4a",
+          "width": 64,
+          "x": 1152,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "32ed0123-35f3-4ddf-a34d-6caaa5ed4a25",
+          "width": 64,
+          "x": 1216,
+          "y": 448,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "e2775dd6-c3f6-4ad8-8c50-36a228231c05",
+          "width": 64,
+          "x": 0,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "bf85477a-7ebd-42e9-abe6-f45185e35157",
+          "width": 64,
+          "x": 64,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "22bfb75c-796f-45cf-b5cf-adbbcfb0eee7",
+          "width": 64,
+          "x": 128,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "6f55241d-3ddd-4f2b-93f6-f5db340f9e14",
+          "width": 64,
+          "x": 192,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "a59552c8-d40e-4815-933a-bf8763d219f2",
+          "width": 64,
+          "x": 256,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "bc598029-139b-40d5-8b68-a4148051c459",
+          "width": 64,
+          "x": 960,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "e1c1c6a5-da84-46df-b710-8f5a5e962a7e",
+          "width": 64,
+          "x": 1024,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "fd1d0ad2-7b02-456c-8442-2653efa12f84",
+          "width": 64,
+          "x": 1088,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "c5c4f582-bb45-4c48-955e-7b4d83ec0f56",
+          "width": 64,
+          "x": 1152,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "4fa566ea-fc0c-40ce-862f-417058e44b3b",
+          "width": 64,
+          "x": 1216,
+          "y": 512,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "abbe2f4f-4674-45ac-8efe-20e2c4630d72",
+          "width": 64,
+          "x": 0,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "dc88aec6-06e7-4228-adde-f9218eb4005c",
+          "width": 64,
+          "x": 64,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "386e94d1-b788-42f4-9bc0-b909d23e003a",
+          "width": 64,
+          "x": 128,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "01108c8b-7230-4f63-bd38-6568436e774a",
+          "width": 64,
+          "x": 192,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "dc7f718b-60a1-4e61-9d83-c7d0d69867a8",
+          "width": 64,
+          "x": 256,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "99172858-74e4-42f5-a334-2220b64f4640",
+          "width": 64,
+          "x": 960,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "894d34d7-6597-4f93-b0a6-5d0676bcba84",
+          "width": 64,
+          "x": 1024,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "b05d82bd-c6d7-4b6f-87a7-2f4c20e11713",
+          "width": 64,
+          "x": 1088,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "25258ce0-abdd-4376-8999-7c7c2918d105",
+          "width": 64,
+          "x": 1152,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "a3581cb8-8e3e-4eff-b5f4-b99c69adfac4",
+          "width": 64,
+          "x": 1216,
+          "y": 576,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "b1a9aed0-cd5b-4471-8d38-fa08f3290f04",
+          "width": 64,
+          "x": 0,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "918c3147-07e1-4971-9200-40d7bde975ff",
+          "width": 64,
+          "x": 64,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "f4f44a87-4292-4aa8-8261-997bdd0d7199",
+          "width": 64,
+          "x": 128,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "dcf13208-8e22-4b31-8774-3629c374c881",
+          "width": 64,
+          "x": 192,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "0bd01518-f5c4-4f78-9aad-135df7cc17c8",
+          "width": 64,
+          "x": 256,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "3a31a84e-10b8-43a6-902e-04abbd345fd6",
+          "width": 64,
+          "x": 960,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "5d9ee5fb-29e7-46e9-be54-af65ce086ff4",
+          "width": 64,
+          "x": 1024,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "f377a5d7-804f-41dd-b6b1-1cb1518c0da8",
+          "width": 64,
+          "x": 1088,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "8144b276-8797-4b42-9f16-8b88b301650d",
+          "width": 64,
+          "x": 1152,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "65f9ec89-9c02-4669-ba4f-c531a363afa4",
+          "width": 64,
+          "x": 1216,
+          "y": 640,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "8cb98a10-e4f6-4c94-8e14-d5d20d188f6e",
+          "width": 64,
+          "x": 0,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "f1a68b8e-354d-4599-9be7-5f42d279a598",
+          "width": 64,
+          "x": 64,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "5650b683-1a4b-4c55-9a80-34bdedb19db0",
+          "width": 64,
+          "x": 128,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "a46177f1-d133-4ca2-adbb-8450c66cf0d8",
+          "width": 64,
+          "x": 192,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "6c63bf9e-6463-46ca-886b-52928051b006",
+          "width": 64,
+          "x": 256,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "a410ed8b-3e59-4e5f-bc86-129ca44e8cdf",
+          "width": 64,
+          "x": 960,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "54018f0a-d4fd-49aa-8aba-38f9654ec5f2",
+          "width": 64,
+          "x": 1024,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "aecbaf82-215a-4ee3-a015-dd1781b44e8e",
+          "width": 64,
+          "x": 1088,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "5c658c1e-5c84-499c-af49-a350553e4ef4",
+          "width": 64,
+          "x": 1152,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "Wall_Mossy",
+          "persistentUuid": "d672b64c-a80c-4ae8-839d-409521c04af4",
+          "width": 64,
+          "x": 1216,
+          "y": 704,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 48,
+          "layer": "",
+          "name": "Torch",
+          "persistentUuid": "12667376-bee2-4fb9-b5f0-9154299fd976",
+          "width": 48,
+          "x": 240,
+          "y": 120,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 48,
+          "layer": "",
+          "name": "Torch",
+          "persistentUuid": "3adc9a1e-edf5-4d53-8095-b728c521d3df",
+          "width": 48,
+          "x": 240,
+          "y": 460,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 48,
+          "layer": "",
+          "name": "Torch",
+          "persistentUuid": "91896bdc-701e-408c-bcc2-d135ead32ea8",
+          "width": 48,
+          "x": 990,
+          "y": 120,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 48,
+          "layer": "",
+          "name": "Torch",
+          "persistentUuid": "1ed1b849-cab9-4899-9a59-b2c95e601fc6",
+          "width": 48,
+          "x": 990,
+          "y": 460,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 40,
+          "layer": "",
+          "name": "Txt_Title",
+          "persistentUuid": "7cf274f4-ad7c-4b02-a690-cc51a9518125",
+          "width": 280,
+          "x": 24,
+          "y": 25,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 30,
+          "layer": "",
+          "name": "Txt_Round",
+          "persistentUuid": "bed93fd8-b4a5-4b5a-a240-7a9b6f8d08c3",
+          "width": 240,
+          "x": 40,
+          "y": 80,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 30,
+          "layer": "",
+          "name": "Txt_BossName",
+          "persistentUuid": "b2ddc185-fa77-424b-973d-da12e2c27766",
+          "width": 240,
+          "x": 40,
+          "y": 120,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 180,
+          "layer": "",
+          "name": "Boss",
+          "persistentUuid": "9bd3c28f-9cdd-458e-b3b2-d0288538c493",
+          "width": 180,
+          "x": 70,
+          "y": 180,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 30,
+          "layer": "",
+          "name": "Txt_BossHP",
+          "persistentUuid": "8cc29fc6-5b45-477c-b710-b348457f8d54",
+          "width": 200,
+          "x": 60,
+          "y": 390,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 25,
+          "layer": "",
+          "name": "Txt_BossCounter",
+          "persistentUuid": "7204df0f-c8b8-4a84-a8d3-02ef0b9ef960",
+          "width": 240,
+          "x": 40,
+          "y": 440,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 40,
+          "layer": "",
+          "name": "UI_Heart",
+          "persistentUuid": "3809c3fb-b0ea-445a-a0bf-14d8d02c51b6",
+          "width": 40,
+          "x": 1010,
+          "y": 50,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 35,
+          "layer": "",
+          "name": "Txt_PlayerHP",
+          "persistentUuid": "2c3562a3-8ad5-4b26-aa18-8ae825182474",
+          "width": 180,
+          "x": 1065,
+          "y": 55,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 40,
+          "layer": "",
+          "name": "UI_Chip",
+          "persistentUuid": "b92d153e-4bfd-4774-abf4-4106967e475d",
+          "width": 40,
+          "x": 1010,
+          "y": 120,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 35,
+          "layer": "",
+          "name": "Txt_PlayerChips",
+          "persistentUuid": "67b349ca-c6ce-4b21-a4f9-61b8cca494b0",
+          "width": 180,
+          "x": 1065,
+          "y": 125,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 35,
+          "layer": "",
+          "name": "Txt_Ante",
+          "persistentUuid": "e7998269-1779-493d-a666-43d56ccc67f3",
+          "width": 260,
+          "x": 1000,
+          "y": 220,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 35,
+          "layer": "",
+          "name": "Txt_HighRoller",
+          "persistentUuid": "11970345-9c0b-4270-aac9-ffb773bc0097",
+          "width": 260,
+          "x": 1000,
+          "y": 280,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 30,
+          "layer": "",
+          "name": "Txt_OrbInfo",
+          "persistentUuid": "ff00b7cb-6c00-4830-9ab5-6a438a54a9d6",
+          "width": 260,
+          "x": 1000,
+          "y": 380,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 30,
+          "layer": "",
+          "name": "Txt_Controls",
+          "persistentUuid": "6c863ef1-7de7-4cc2-bba0-85f803aaad25",
+          "width": 280,
+          "x": 980,
+          "y": 540,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 50,
+          "layer": "",
+          "name": "Txt_Banner",
+          "persistentUuid": "ca79b1fe-15ed-4d8f-af34-5823967637b9",
+          "width": 450,
+          "x": 420,
+          "y": 320,
+          "zOrder": 25,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 720,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "7c60f2d8-f32e-4675-8115-1e024e7f442d",
+          "width": 12,
+          "x": 320,
+          "y": 0,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 720,
+          "layer": "",
+          "name": "Wall_Boundaries",
+          "persistentUuid": "3807fa9e-c4f0-4bac-b74c-ca35d6d742a0",
+          "width": 12,
+          "x": 948,
+          "y": 0,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 48,
+          "layer": "",
+          "name": "Dropper",
+          "persistentUuid": "d24355c5-1149-4c6c-8695-9d972a3de644",
+          "width": 48,
+          "x": 624,
+          "y": 30,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "74789bb2-464b-4d11-9494-96b86c7cd109",
+          "width": 26,
+          "x": 380,
+          "y": 130,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "4cfb723e-21e4-4f76-8134-7654f13c0819",
+          "width": 26,
+          "x": 450,
+          "y": 130,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "2950c2ca-da97-4fcb-9503-169fac22be63",
+          "width": 26,
+          "x": 520,
+          "y": 130,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "92c7e1c3-cf2a-4248-b809-4607e65c89cb",
+          "width": 26,
+          "x": 590,
+          "y": 130,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "21562e4b-0cfd-4931-b21a-e05449231892",
+          "width": 26,
+          "x": 660,
+          "y": 130,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "df9ad472-8f8d-4c7e-9755-9a09b498e62e",
+          "width": 26,
+          "x": 730,
+          "y": 130,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "f9057647-a71c-4a6f-b7fa-9f02ddc878be",
+          "width": 26,
+          "x": 800,
+          "y": 130,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "63f24e0e-5bf3-46a4-a3e7-7ce216628b76",
+          "width": 26,
+          "x": 870,
+          "y": 130,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "7d14a473-72ee-4a6d-8b77-715652467a9d",
+          "width": 26,
+          "x": 415,
+          "y": 175,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "1b8c0f76-c2e4-44e4-bccc-f3c547add3cf",
+          "width": 26,
+          "x": 485,
+          "y": 175,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "0c2936b4-2905-45a3-801b-1a995ad3f61d",
+          "width": 26,
+          "x": 555,
+          "y": 175,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Bomb",
+          "persistentUuid": "9e1b8276-c4f2-4c7c-a77a-5aab1ab3a1a7",
+          "width": 26,
+          "x": 625,
+          "y": 175,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "4ab95ba2-59a0-47ea-bfbd-6e26f25b52e3",
+          "width": 26,
+          "x": 695,
+          "y": 175,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "48c9d126-4393-4d8d-9e61-f269a20579a5",
+          "width": 26,
+          "x": 765,
+          "y": 175,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "9dd4c0f3-9de4-4824-a3c7-1e93ff9276b4",
+          "width": 26,
+          "x": 835,
+          "y": 175,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "5e3cd53a-a645-45ec-98d8-47491bb5ee46",
+          "width": 26,
+          "x": 380,
+          "y": 220,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "80c64971-2e18-463b-a240-880e71dba6e2",
+          "width": 26,
+          "x": 450,
+          "y": 220,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "7d58e339-5b17-4202-b61a-8e495c8c8860",
+          "width": 26,
+          "x": 520,
+          "y": 220,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "151f8c4a-81fe-4272-bcb1-b2337348046b",
+          "width": 26,
+          "x": 590,
+          "y": 220,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "a12a2e86-3cd2-401d-9981-cce62e35ab64",
+          "width": 26,
+          "x": 660,
+          "y": 220,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "2f0626e2-06e6-4530-b269-77b9e1e7e557",
+          "width": 26,
+          "x": 730,
+          "y": 220,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "b0bd8706-d740-428c-b212-f2f0ce07ef99",
+          "width": 26,
+          "x": 800,
+          "y": 220,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "d51a3ea6-80ec-49df-a9f7-ec78566d34f7",
+          "width": 26,
+          "x": 870,
+          "y": 220,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "41da454a-0df0-4002-9185-01333778c49a",
+          "width": 26,
+          "x": 415,
+          "y": 265,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "5b11b342-2eb1-4558-a084-702f431f1081",
+          "width": 26,
+          "x": 485,
+          "y": 265,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "76d3c8c2-8fa3-434d-a6e0-0c3d21e04593",
+          "width": 26,
+          "x": 555,
+          "y": 265,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "a58f5ba7-c832-4117-a586-6fc0dbff7fc8",
+          "width": 26,
+          "x": 625,
+          "y": 265,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "9879decb-7865-40ed-9471-a4062eaef70f",
+          "width": 26,
+          "x": 695,
+          "y": 265,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "fab75533-ee34-4718-a89d-851479ab351a",
+          "width": 26,
+          "x": 765,
+          "y": 265,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "89ad90f6-edf1-43df-8016-f3d3d065d8f2",
+          "width": 26,
+          "x": 835,
+          "y": 265,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "0abe559e-ac1d-410b-a2ef-4d1e07522f4c",
+          "width": 26,
+          "x": 380,
+          "y": 310,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "e7df9337-b02b-43de-b9fa-c7d9864176b9",
+          "width": 26,
+          "x": 450,
+          "y": 310,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "63408644-b83b-4d81-a67b-1ccb183df9ee",
+          "width": 26,
+          "x": 520,
+          "y": 310,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "b6ca6e74-5c3d-47bb-a898-871767925967",
+          "width": 26,
+          "x": 590,
+          "y": 310,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "504265dc-2399-4be0-b9a6-eee996229c6d",
+          "width": 26,
+          "x": 660,
+          "y": 310,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "9288732c-9e30-4a7a-951a-b03276520ff5",
+          "width": 26,
+          "x": 730,
+          "y": 310,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "7bda2a7b-6448-4d92-b2ae-a39aa1138315",
+          "width": 26,
+          "x": 800,
+          "y": 310,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "183a5fa6-129a-495f-9405-583981f882c0",
+          "width": 26,
+          "x": 870,
+          "y": 310,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "ce45e0f3-99a0-425b-a47a-443f3d2780e6",
+          "width": 26,
+          "x": 415,
+          "y": 355,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Bomb",
+          "persistentUuid": "1ef1b4c7-33d5-42a6-94db-d0da04c2245f",
+          "width": 26,
+          "x": 485,
+          "y": 355,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "58cbee49-9dba-4d50-ba80-db240a771f9f",
+          "width": 26,
+          "x": 555,
+          "y": 355,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "5a97f01b-ed06-4f31-b4c0-fc75562815b4",
+          "width": 26,
+          "x": 625,
+          "y": 355,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "17c66389-c3b4-4d1d-b993-0695b6c7a726",
+          "width": 26,
+          "x": 695,
+          "y": 355,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Bomb",
+          "persistentUuid": "84635869-f7db-4a23-b919-464f9b10c12c",
+          "width": 26,
+          "x": 765,
+          "y": 355,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "7ead61fb-7890-4f59-b935-6a77693a2d30",
+          "width": 26,
+          "x": 835,
+          "y": 355,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "6fb0fc02-5f2d-41ba-a5d2-4819fea7eaca",
+          "width": 26,
+          "x": 380,
+          "y": 400,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "44171644-4201-48bf-a113-7bcef466b013",
+          "width": 26,
+          "x": 450,
+          "y": 400,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "b5e22d45-276e-4c29-9518-dd107ad4f4f0",
+          "width": 26,
+          "x": 520,
+          "y": 400,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "ca0ead3c-c9b2-418a-963e-1248359f9759",
+          "width": 26,
+          "x": 590,
+          "y": 400,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "e8fbfaff-160f-4c2d-bb19-714160b10761",
+          "width": 26,
+          "x": 660,
+          "y": 400,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "7ee51332-e0cc-418d-88a6-bb622718ff2f",
+          "width": 26,
+          "x": 730,
+          "y": 400,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "8e8b9b66-f4eb-4f49-9066-d7a9ccd95889",
+          "width": 26,
+          "x": 800,
+          "y": 400,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "a9a8460d-5c0c-4057-8416-7b7adcbc919d",
+          "width": 26,
+          "x": 870,
+          "y": 400,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "22b3ed03-bf6e-4b25-a46e-78571b1a2e85",
+          "width": 26,
+          "x": 415,
+          "y": 445,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "3c8fa8d8-40e7-4e03-8cd6-98e95959dbc0",
+          "width": 26,
+          "x": 485,
+          "y": 445,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "c52fcd66-9e70-4dd6-a676-575b4a2b48a4",
+          "width": 26,
+          "x": 555,
+          "y": 445,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "931cd163-ba4e-4423-a01e-96682e32d9d2",
+          "width": 26,
+          "x": 625,
+          "y": 445,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "a469a311-c405-4326-81a7-17ebb6f626ab",
+          "width": 26,
+          "x": 695,
+          "y": 445,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "04aa271e-cde2-4fc0-909d-15bebbf0e857",
+          "width": 26,
+          "x": 765,
+          "y": 445,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "9ef8aefa-4555-484a-a918-6ee12a7061b7",
+          "width": 26,
+          "x": 835,
+          "y": 445,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "5a3db670-ed1a-486c-989e-1c8df2022176",
+          "width": 26,
+          "x": 380,
+          "y": 490,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "9b5887c0-5db0-4c4d-b2b3-eebc0ba21d2d",
+          "width": 26,
+          "x": 450,
+          "y": 490,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "3e29cf65-c405-4919-bb0a-2f44dcf8bfb1",
+          "width": 26,
+          "x": 520,
+          "y": 490,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "014f9ab3-3d33-4e7a-b2a7-1a1880b30e88",
+          "width": 26,
+          "x": 590,
+          "y": 490,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "3a23a074-aae0-40cf-8a4b-5405dd200741",
+          "width": 26,
+          "x": 660,
+          "y": 490,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "7eee5ca3-05da-4176-9761-52808ef84cdd",
+          "width": 26,
+          "x": 730,
+          "y": 490,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_Gold",
+          "persistentUuid": "59a0ccee-da80-4799-902a-c1a762f24888",
+          "width": 26,
+          "x": 800,
+          "y": 490,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "846e8355-62b1-4574-8ff8-5dc2d75ca299",
+          "width": 26,
+          "x": 870,
+          "y": 490,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "a2317b2a-b761-43c2-8526-75ffda05d44d",
+          "width": 26,
+          "x": 415,
+          "y": 535,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "c975e2ca-ecec-4831-969e-0936ebd1d945",
+          "width": 26,
+          "x": 485,
+          "y": 535,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "b83d3c2f-e8a5-4e06-af23-082a31ad0d89",
+          "width": 26,
+          "x": 555,
+          "y": 535,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "ad18edab-d3cf-4fb6-ba44-e075be725f2e",
+          "width": 26,
+          "x": 625,
+          "y": 535,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "908a291d-f665-4acb-8c00-f571854f6cef",
+          "width": 26,
+          "x": 695,
+          "y": 535,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "28923660-6d5c-4ea7-9163-ee72d80ee388",
+          "width": 26,
+          "x": 765,
+          "y": 535,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "name": "Peg_White",
+          "persistentUuid": "1fa4707c-3aac-4abd-83d3-9e7ec0af4d01",
+          "width": 26,
+          "x": 835,
+          "y": 535,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 100,
+          "layer": "",
+          "name": "Bucket_0_5x_A",
+          "persistentUuid": "2d56a326-ec9f-450b-ac30-52f386d0d644",
+          "width": 120,
+          "x": 335,
+          "y": 620,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 100,
+          "layer": "",
+          "name": "Bucket_1_5x_A",
+          "persistentUuid": "2e9fc2c9-74be-44a4-bb42-9445a67240d3",
+          "width": 120,
+          "x": 457,
+          "y": 620,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 100,
+          "layer": "",
+          "name": "Bucket_5_0x",
+          "persistentUuid": "3e717be3-a9ca-4f56-8567-ba9f041306b6",
+          "width": 120,
+          "x": 579,
+          "y": 620,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 100,
+          "layer": "",
+          "name": "Bucket_1_5x_B",
+          "persistentUuid": "e39a9c0d-4757-4644-98d6-3202e15d827f",
+          "width": 120,
+          "x": 701,
+          "y": 620,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 100,
+          "layer": "",
+          "name": "Bucket_0_5x_B",
+          "persistentUuid": "896689d4-1ad0-4ac6-b1ed-3dfe42fb874b",
+          "width": 120,
+          "x": 823,
+          "y": 620,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "name": "Divider",
+          "persistentUuid": "a07cd97a-39b4-41f0-81ca-64ad2f0172d9",
+          "width": 6,
+          "x": 454,
+          "y": 610,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "name": "Divider",
+          "persistentUuid": "815f898c-bf25-46d0-9502-7b093ab080ac",
+          "width": 6,
+          "x": 576,
+          "y": 610,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "name": "Divider",
+          "persistentUuid": "367caca4-05de-4e5b-b879-311a2202b883",
+          "width": 6,
+          "x": 698,
+          "y": 610,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 110,
+          "layer": "",
+          "name": "Divider",
+          "persistentUuid": "d92eeb43-bba4-46d8-8e56-571d4a36a524",
+          "width": 6,
+          "x": 820,
+          "y": 610,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Dropper",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "dropper.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Orb",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Circle",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 2.0,
+              "friction": 0.3,
+              "restitution": 0.8,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1.5,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "orb_standard_iron.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Peg_White",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Static",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Circle",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1.0,
+              "friction": 0.3,
+              "restitution": 0.95,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1.0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "peg_standard_white.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Peg_Gold",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Static",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Circle",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1.0,
+              "friction": 0.3,
+              "restitution": 0.95,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1.0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "peg_multiplier_gold.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Peg_Bomb",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Static",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Circle",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1.0,
+              "friction": 0.3,
+              "restitution": 0.95,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1.0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "peg_bomb_red.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Bucket_0_5x_A",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bucket_0_5x_a.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Bucket_1_5x_A",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bucket_1_5x_a.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Bucket_5_0x",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bucket_5_0x.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Bucket_1_5x_B",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bucket_1_5x_b.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Bucket_0_5x_B",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bucket_0_5x_b.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Divider",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Static",
+              "bullet": false,
+              "fixedRotation": true,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1.0,
+              "friction": 0.3,
+              "restitution": 0.3,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1.0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "wall_brick.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Wall_Boundaries",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Static",
+              "bullet": false,
+              "fixedRotation": true,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1.0,
+              "friction": 0.3,
+              "restitution": 0.5,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1.0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "wall_brick.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Boss",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "boss1_goblin_guard.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Torch",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.2,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "torch_f1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "torch_f2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "UI_Heart",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ui_heart.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "UI_Chip",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ui_chip.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Wall_Mossy",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "wall_mossy.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 16,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_Title",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "PLINKO DUNGEON",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 32,
+          "color": "0;240;255"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_Round",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "ROUND 1 / 3",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 22,
+          "color": "255;215;0"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_BossName",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "GOBIN GUARD",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 24,
+          "color": "255;255;255"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_BossHP",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "HP 60 / 60",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 22,
+          "color": "255;80;80"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_BossCounter",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "COUNTER-STRIKE: 8 DMG",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 18,
+          "color": "255;165;0"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_PlayerHP",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "100 HP",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 24,
+          "color": "255;80;80"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_PlayerChips",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "$ 100",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 28,
+          "color": "255;215;0"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_Ante",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "[1] ANTE $10 (ACTIVE)",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": "0;240;255"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_HighRoller",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "[2] HIGH ROLLER $25",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": "255;80;80"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_OrbInfo",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "ORB: STANDARD IRON",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 18,
+          "color": "200;200;200"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_Controls",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "[A][D] Aim | [SPACE] Drop Orb",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 16,
+          "color": "150;150;150"
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "Txt_Banner",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 36,
+          "color": "255;215;0"
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT"
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "comment": "--- PLINKO DUNGEON GAME LOGIC ---",
+          "comment2": "Turn-based physics pachinko roguelike engine"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "PlayerHP",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "PlayerChips",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Wager",
+                "=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "CurrentRound",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "BossHP",
+                "=",
+                "60"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "BossMaxHP",
+                "=",
+                "60"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "BossCounter",
+                "=",
+                "8"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Multiplier",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "\"aiming\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundCanLoop"
+              },
+              "parameters": [
+                "",
+                "assets/bgm_chiptune.wav",
+                "yes",
+                "40",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Dropper Movement (Left/Right)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "ValBetween"
+              },
+              "parameters": [
+                "Dropper.X()",
+                "360",
+                "920"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MvtSimple"
+              },
+              "parameters": [
+                "Dropper",
+                "-350",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Right"
+              ]
+            },
+            {
+              "type": {
+                "value": "ValBetween"
+              },
+              "parameters": [
+                "Dropper.X()",
+                "350",
+                "900"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MvtSimple"
+              },
+              "parameters": [
+                "Dropper",
+                "350",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Wager Selection ([1] Ante $10, [2] High Roller $25)"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Num1"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Wager",
+                "=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Ante",
+                "Text",
+                "=",
+                "\"[1] ANTE $10 (ACTIVE)\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_HighRoller",
+                "Text",
+                "=",
+                "\"[2] HIGH ROLLER $25\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Num2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Wager",
+                "=",
+                "25"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_Ante",
+                "Text",
+                "=",
+                "\"[1] ANTE $10\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_HighRoller",
+                "Text",
+                "=",
+                "\"[2] HIGH ROLLER $25 (ACTIVE)\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Drop Orb into Pegboard"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "Space"
+              ]
+            },
+            {
+              "type": {
+                "value": "VarCompareString"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "\"aiming\""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarCompareNumbers"
+              },
+              "parameters": [
+                "PlayerChips",
+                ">=",
+                "Variable(Wager)"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetStringVariable"
+              },
+              "parameters": [
+                "GameState",
+                "=",
+                "\"dropping\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "PlayerChips",
+                "-",
+                "Variable(Wager)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Multiplier",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Orb",
+                "Dropper.X() + 10",
+                "Dropper.Y() + 40",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_orb_release.wav",
+                "",
+                "60",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "Peg Collisions"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::CollisionStarted"
+              },
+              "parameters": [
+                "Orb",
+                "Physics2",
+                "Peg_White",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "+",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_peg_ding.wav",
+                "",
+                "50",
+                "1.0 + (Variable(AccumulatedDamage) * 0.05)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::CollisionStarted"
+              },
+              "parameters": [
+                "Orb",
+                "Physics2",
+                "Peg_Gold",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Multiplier",
+                "*",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_peg_ding.wav",
+                "",
+                "60",
+                "1.5"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::CollisionStarted"
+              },
+              "parameters": [
+                "Orb",
+                "Physics2",
+                "Peg_Bomb",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "AccumulatedDamage",
+                "+",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets/sfx_bomb_explosion.wav",
+                "",
+                "80",
+                "1.0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "comment": "HUD Updates"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerHP",
+                "Text",
+                "=",
+                "ToString(Variable(PlayerHP)) + \" HP\""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_PlayerChips",
+                "Text",
+                "=",
+                "\"$ \" + ToString(Variable(PlayerChips))"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "Txt_BossHP",
+                "Text",
+                "=",
+                "\"HP \" + ToString(Variable(BossHP)) + \" / \" + ToString(Variable(BossMaxHP))"
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "gravityX": 0,
+          "gravityY": 12.0,
+          "scaleX": 50,
+          "scaleY": 50
+        }
+      ]
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [],
+  "externalLayouts": []
+}
