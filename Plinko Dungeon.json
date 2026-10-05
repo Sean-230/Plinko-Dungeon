@@ -378,9 +378,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/card_draft_iron.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -388,9 +386,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/card_draft_slime.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -398,9 +394,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/card_draft_boulder.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -408,9 +402,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/ui_draft_header.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -418,9 +410,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/peg_standard_white_hit.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -428,9 +418,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/peg_multiplier_gold_hit.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -438,9 +426,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/peg_bomb_red_hit.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -448,9 +434,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_cyan_f1.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -458,9 +442,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_cyan_f2.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -468,9 +450,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_cyan_f3.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -478,9 +458,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_cyan_f4.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -488,9 +466,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_gold_f1.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -498,9 +474,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_gold_f2.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -508,9 +482,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_gold_f3.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -518,9 +490,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_gold_f4.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -528,9 +498,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_bomb_f1.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -538,9 +506,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_bomb_f2.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -548,9 +514,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_bomb_f3.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -558,9 +522,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_bomb_f4.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -568,9 +530,7 @@
         "kind": "image",
         "metadata": "",
         "name": "assets/fx_spark_bomb_f5.png",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
+        "smoothed": false,
         "userAdded": true
       }
     ]
@@ -3012,6 +2972,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Aim_Dots",
+          "persistentUuid": "bc9f366a-4327-407b-8364-36915a023e9b",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -5592,6 +5553,21 @@
           },
           {
             "objectName": "UI_Banner_Frame"
+          },
+          {
+            "objectName": "Card_Draft_Iron"
+          },
+          {
+            "objectName": "Card_Draft_Slime"
+          },
+          {
+            "objectName": "Card_Draft_Boulder"
+          },
+          {
+            "objectName": "UI_Draft_Header"
+          },
+          {
+            "objectName": "Fx_Pixel_Explosion"
           }
         ]
       },
@@ -7682,7 +7658,7 @@
                 "Txt_Banner",
                 "Text",
                 "=",
-                "\"\u2605 5.0x JACKPOT! \u2605\n\nTOTAL DAMAGE:\n\" + ToString(Variable(DamageDealt)) + \" DMG TO BOSS!\n\nCHIPS WON: +$\" + ToString(Variable(ChipsWon))"
+                "\"★ 5.0x JACKPOT! ★\n\nTOTAL DAMAGE:\n\" + ToString(Variable(DamageDealt)) + \" DMG TO BOSS!\n\nCHIPS WON: +$\" + ToString(Variable(ChipsWon))"
               ]
             },
             {
@@ -7864,7 +7840,7 @@
                 "Txt_Banner",
                 "Text",
                 "=",
-                "\"\u2605 1.5x BUCKET! \u2605\n\nTOTAL DAMAGE:\n\" + ToString(Variable(DamageDealt)) + \" DMG TO BOSS!\n\nCHIPS WON: +$\" + ToString(Variable(ChipsWon))"
+                "\"★ 1.5x BUCKET! ★\n\nTOTAL DAMAGE:\n\" + ToString(Variable(DamageDealt)) + \" DMG TO BOSS!\n\nCHIPS WON: +$\" + ToString(Variable(ChipsWon))"
               ]
             },
             {
@@ -8046,7 +8022,7 @@
                 "Txt_Banner",
                 "Text",
                 "=",
-                "\"\u2605 1.5x BUCKET! \u2605\n\nTOTAL DAMAGE:\n\" + ToString(Variable(DamageDealt)) + \" DMG TO BOSS!\n\nCHIPS WON: +$\" + ToString(Variable(ChipsWon))"
+                "\"★ 1.5x BUCKET! ★\n\nTOTAL DAMAGE:\n\" + ToString(Variable(DamageDealt)) + \" DMG TO BOSS!\n\nCHIPS WON: +$\" + ToString(Variable(ChipsWon))"
               ]
             },
             {
@@ -8702,7 +8678,7 @@
                 "Txt_Banner",
                 "Text",
                 "=",
-                "\"\u2605 GOBLIN GUARD DEFEATED! \u2605\n\nCHOOSE YOUR REWARD ORB\nTO BATTLE SLIME BRUTE!\n\n[Click Card 1, 2, or 3]\""
+                "\"★ GOBLIN GUARD DEFEATED! ★\n\nCHOOSE YOUR REWARD ORB\nTO BATTLE SLIME BRUTE!\n\n[Click Card 1, 2, or 3]\""
               ]
             },
             {
@@ -9047,7 +9023,7 @@
                 "Txt_Banner",
                 "Text",
                 "=",
-                "\"\u2605 SLIME BRUTE DEFEATED! \u2605\n\nCHOOSE YOUR REWARD ORB\nFOR THE DRAGON BATTLE!\n\n[Click Card 1, 2, or 3]\""
+                "\"★ SLIME BRUTE DEFEATED! ★\n\nCHOOSE YOUR REWARD ORB\nFOR THE DRAGON BATTLE!\n\n[Click Card 1, 2, or 3]\""
               ]
             },
             {
@@ -9247,7 +9223,7 @@
                 "Txt_Banner",
                 "Text",
                 "=",
-                "\"\ud83c\udfc6 VICTORY! \ud83c\udfc6\n\nYOU CONQUERED\nPLINKO DUNGEON!\n\n[Press Space or Click\nto Replay]\""
+                "\"🏆 VICTORY! 🏆\n\nYOU CONQUERED\nPLINKO DUNGEON!\n\n[Press Space or Click\nto Replay]\""
               ]
             },
             {
@@ -9397,7 +9373,7 @@
                 "Txt_Banner",
                 "Text",
                 "=",
-                "\"\ud83d\udc80 GAME OVER! \ud83d\udc80\n\nTHE DUNGEON TOOK\nYOUR SOUL!\n\n[Press Space or Click\nto Restart]\""
+                "\"💀 GAME OVER! 💀\n\nTHE DUNGEON TOOK\nYOUR SOUL!\n\n[Press Space or Click\nto Restart]\""
               ]
             }
           ]
@@ -9465,7 +9441,7 @@
                 "Txt_Banner",
                 "Text",
                 "=",
-                "\"\ud83d\udc80 BANKRUPT! \ud83d\udc80\n\nYOU RAN OUT\nOF CHIPS!\n\n[Press Space or Click\nto Restart]\""
+                "\"💀 BANKRUPT! 💀\n\nYOU RAN OUT\nOF CHIPS!\n\n[Press Space or Click\nto Restart]\""
               ]
             }
           ]
