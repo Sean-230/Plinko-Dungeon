@@ -1,2 +1,13 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Explicit binary files to prevent line-ending corruption across platforms (Windows / Mac / Linux)
+*.png binary
+*.wav binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+
+# Project files LF normalization
+*.json text eol=lf
+*.md text eol=lf
