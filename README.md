@@ -16,8 +16,8 @@ A roguelike physics-pachinko descent. Drop orbs through pegs to damage monsters,
 
 ## 🎮 Core Loop
 1. **Map**: Each act is a fresh branching map (battles, elites, rest sites, shops, treasure, and a boss). Pick a glowing room to enter it.
-2. **Battle**: A random enemy (scaled by act and depth) on a procedurally generated peg board (classic, scatter, diamond, caverns or lanes layouts).
-3. **Wager & Drop**: Choose `[1]` Ante ($10) or `[2]` High Roller ($25, damage x1.5), aim with `[A]/[D]` or the mouse, drop with `[SPACE]` or click. Your next orb comes from your shuffled orb bag (see Orbs).
+2. **Battle**: A random enemy (scaled by act and depth) on a procedurally generated peg board (classic, scatter, diamond, caverns or lanes layouts). Neon deflectors slant inward along both walls and the outer pegs leave a gap the orb falls through, so orbs don't wedge against the walls. If an orb makes no downward progress for 0.9 seconds it gets a small nudge.
+3. **Wager & Drop**: Choose `[1]` Ante ($10) or `[2]` High Roller ($25, damage x1.5), aim and throw (see Aiming below), then drop with `[SPACE]` or a click. Your next orb comes from your shuffled orb bag (see Orbs).
 4. **Cascade**: Each peg scores once per shot.
    - ⚪ **White peg**: + the orb's damage per peg.
    - 🟡 **Gold peg**: +0.5x multiplier.
@@ -28,11 +28,31 @@ A roguelike physics-pachinko descent. Drop orbs through pegs to damage monsters,
 
 ---
 
+## 👹 Enemy Intents
+
+The left panel always shows the enemy's next move, so you can plan your wager before you drop:
+
+| Intent | Effect |
+|--------|--------|
+| ATTACK | Deals its attack damage |
+| HEAVY STRIKE | Deals 1.8x damage |
+| BRACE | No damage; +armor against your next drop only |
+| MEND | Heals 15% of its max HP (only when hurt) |
+
+Traits such as steal and tax happen when it hits; regen and enrage still happen every turn.
+
+## 🎯 Aiming
+The dropper is fixed in the middle of the top of the board and **rotates** (up to 75° either side of straight down). You choose both the **direction** and the **power** of the throw:
+- **Mouse**: point anywhere on the screen (the buttons are ignored). The direction from the dropper is the angle, and the distance is the power, so a cursor far to a side gives the full angle.
+- **Keyboard**: `[A]`/`[D]` rotate, `[W]`/`[S]` raise or lower the power.
+- A short **dotted stub** shows the launch direction and strength only. It deliberately does not show where the orb lands: you read the board yourself.
+- The power bar and the angle are shown in the top-left corner of the board.
+
 ## 🔮 Orbs
 | Orb | Base | Per Peg | Bounce | Notes |
 |---|---|---|---|---|
 | Standard Iron | 1 | +1 | 0.55 | Balanced and predictable |
-| Bouncy Slime | 0 | +1 | 0.82 | Long cascades |
+| Bouncy Slime | 0 | +1 | 0.74 | Long cascades |
 | Heavy Boulder | 5 | +1 | 0.20 | Falls fast and smashes white pegs |
 
 You start with **one Standard Iron**. Orbs you win join your **orb bag**. Every drop uses the next orb in the bag, and the bag reshuffles when it runs out. The right panel shows the next orb and the queue behind it (between fights it shows the whole bag). Upgrades name the exact orb they improve: +1 base and +1 per peg.
@@ -52,17 +72,27 @@ HP and attack scale with act and map depth.
 ## 🕹️ Controls
 | Action | Key / Input |
 |---|---|
-| Aim | `[A]` / `[D]`, arrow keys, or mouse |
-| Drop orb | `[SPACE]`, `[DOWN]`, or click the playfield |
+| Rotate the dropper | mouse, or `[A]` / `[D]` (arrow keys left / right) |
+| Set the power | distance of the mouse from the dropper, or `[W]` / `[S]` (arrow keys up / down) |
+| Drop orb | `[SPACE]`, `[ENTER]`, or click the playfield |
 | Ante $10 / High Roller $25 | `[1]` / `[2]` or click the buttons |
 | Map: choose room | Click, or `[LEFT]`/`[RIGHT]` + `[SPACE]` |
 | Cards: pick / skip | Click or `[1]` `[2]` `[3]` / `[S]` |
+| Pause menu | `[ESC]`, `[P]` or the `MENU` button (top right) |
+| Menus | `[W]`/`[S]` or arrows to select, `[ENTER]` or click to confirm, `[ESC]` back, `[A]`/`[D]` or arrows to change sliders |
 | Mute | `[M]` |
 
 ## 🏆 Win & Lose
 The run is endless, so your score is how deep you got. You lose when your HP hits 0 (Phoenix Feather saves you once). With fewer than $10 in chips you still drop for free, but earn no chips. Your best run is saved in the browser.
 
 ---
+
+## 🎛️ Menus
+- **Main menu**: Continue (when a saved run exists), New Run, How to Play and Settings, over an animated board of bouncing orbs. It also shows your best run.
+- **Pause menu** (`[ESC]` or the `MENU` button in the top-right corner): Resume, How to Play, Settings and Quit to Menu. Physics freezes while paused.
+- **Settings**: music volume, sound effects volume, screen shake on/off and fullscreen. These are saved in the browser.
+- **Continue**: the run is saved every time the map opens, so Continue always resumes at a map screen. Quitting mid-battle returns you to the last map you visited. Dying deletes the save.
+- **Game over**: run stats, a "new best run" flag, then New Run or Main Menu.
 
 ## 🖥️ Screen Size
 The project uses the `scaleOuter` resize mode. The full 1280x720 layout is always visible, and any spare space on wide or tall windows shows dungeon wall instead of black bars.
