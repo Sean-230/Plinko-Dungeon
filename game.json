@@ -1,7 +1,7 @@
 {
   "firstLayout": "Game",
   "gdVersion": {
-    "build": 283,
+    "build": 287,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -607,6 +607,7 @@
       "mangledName": "Game",
       "name": "Game",
       "r": 9,
+      "renderer3DWorldScale": 100,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "Plinko Dungeon - Main Game",
@@ -6372,6 +6373,8 @@
             "      intentName: mk('', L.x + 62, 404, L.w - 76, 15, C.text),",
             "      intentText: mk('', L.x + 62, 424, L.w - 76, 11, C.dim),",
             "      runStats: mk('', L.x + 14, 90, L.w - 28, 14, C.text),",
+            "      tutTitle: mk('HOW TO PLAY', L.x + 14, 202, L.w - 28, 14, C.gold, 'center'),",
+            "      tutBody: mk('AIM: mouse or [A]/[D], [W]/[S] power\\nDROP: [SPACE] or click\\n\\nWHITE: +damage\\nGOLD: +multiplier\\nBOMB: big dmg, ends shot 1x\\n\\nBuckets multiply - center 5x JACKPOT\\n[1] ANTE $10  [2] HIGH $25 x1.5', L.x + 14, 224, L.w - 28, 11, C.text),",
             "      bannerTitle: mk('', L.x + 14, 474, L.w - 28, 16, C.gold),",
             "      bannerBody: mk('', L.x + 14, 502, L.w - 28, 13, C.text),",
             "      menu: mk('MENU   [ESC]', PD.HUD.menu.x, PD.HUD.menu.y + 10, PD.HUD.menu.w, 13, C.text, 'center'),",
@@ -6452,6 +6455,8 @@
             "    for (const k of ['wagerTitle', 'anteName', 'anteSub', 'highName', 'highSub']) h[k].hide(!battle);",
             "    for (const k of ['name', 'hpText', 'atk', 'traits', 'intentTag', 'intentName', 'intentText']) h[k].hide(!battle);",
             "    h.runStats.hide(battle);",
+            "    h.tutTitle.hide(battle);",
+            "    h.tutBody.hide(battle);",
             "    h.runStats.setText('ENEMIES DEFEATED   ' + run.kills + '\\nBEST HIT   ' + run.bestHit + '\\nTOTAL DAMAGE   ' + run.totalDamage);",
             "    PD.refreshOrbQueue(S);",
             "    const names = run.relics.map((id) => PD.RELICS.find((r) => r.id === id).name);",
@@ -6515,6 +6520,7 @@
             "    // Left column.",
             "    panel(p, L.x, 14, L.w, 52);",
             "    panel(p, L.x, 76, L.w, battle ? 374 : 110);",
+            "    if (!battle) panel(p, L.x, 194, L.w, 254);",
             "    panel(p, L.x, 460, L.w, 248);",
             "    if (battle && e) {",
             "      bar(p, L.x + 14, 308, L.w - 28, 24, e.hp / e.maxHp, e.hp / e.maxHp > 0.35 ? '214;56;72' : '255;90;40');",
@@ -6908,6 +6914,10 @@
             "            mk(S, 'Slain by ' + x.killer + ' on floor ' + run.floor + ' of act ' + (run.act + 1), 0, 138, 1280, 18, WHITE, 'center');",
             "            if (x.newBest) mk(S, 'NEW BEST RUN!', 0, 170, 1280, 20, GOLD, 'center');",
             "            M.panel = { x: 440, y: 206, w: 400, h: 316 };",
+            "            M.panelLeft = { x: 60, y: 206, w: 360, h: 316 };",
+            "            mk(S, 'HOW TO PLAY', 86, 226, 308, 16, GOLD, 'center');",
+            "            mk(S, 'AIM: mouse or [A]/[D] + [W]/[S] for power\\nDROP: [SPACE] or click\\n\\nWHITE peg: +damage\\nGOLD peg: +multiplier\\nBOMB peg: big damage, ends shot at 1x\\n\\nLand in buckets - center is 5x JACKPOT\\n\\n[1] ANTE $10 - [2] HIGH ROLLER $25 (x1.5 dmg)\\nWatch enemy intent on the left panel', 86, 254, 308, 12, WHITE, 'left');",
+            "            mk(S, 'TIP: plan your wager!', 86, 474, 308, 11, DIM, 'center');",
             "            const rows = [['ENEMIES SLAIN', run.kills], ['TOTAL DAMAGE', run.totalDamage], ['BIGGEST HIT', run.bestHit], ['FLOOR REACHED', run.floor], ['RELICS', run.relics.length], ['ORBS IN BAG', run.bag.length], ['CHIPS LEFT', '$' + run.chips]];",
             "            mk(S, rows.map((r) => r[0]).join('\\n\\n'), 466, 226, 200, 15, DIM, 'left');",
             "            mk(S, rows.map((r) => r[1]).join('\\n\\n'), 640, 226, 174, 15, GOLD, 'right');",
@@ -7005,6 +7015,14 @@
             "      const bob = Math.sin(t * 2) * 4;",
             "      M.logo.logo.setPosition(0, M.logo.y + bob);",
             "      M.logo.shadow.setPosition(5, M.logo.y + bob + 5);",
+            "    }",
+            "    if (M.panelLeft) {",
+            "      const q2 = M.panelLeft;",
+            "      p.setFillColor('10;14;28');",
+            "      p.setOutlineColor('62;78;124');",
+            "      p.setOutlineSize(2);",
+            "      p.drawRoundedRectangle(q2.x, q2.y, q2.x + q2.w, q2.y + q2.h, 10);",
+            "      p.setOutlineSize(0);",
             "    }",
             "    if (M.panel) {",
             "      const q = M.panel;",
@@ -7402,7 +7420,24 @@
       ]
     }
   ],
+  "layoutsFolderStructure": {
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "itemName": "Game"
+      }
+    ]
+  },
   "externalEvents": [],
+  "externalEventsFolderStructure": {
+    "folderName": "__ROOT"
+  },
+  "testsFolderStructure": {
+    "folderName": "__ROOT"
+  },
   "eventsFunctionsExtensions": [],
-  "externalLayouts": []
+  "externalLayouts": [],
+  "externalLayoutsFolderStructure": {
+    "folderName": "__ROOT"
+  }
 }
